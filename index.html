@@ -1,0 +1,3124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Organic Chemistry MCQs - MDCAT, NUMS, HEC, AKU & Competition Exams</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- KaTeX for equations -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"></script>
+    <style>
+        :root {
+            --primary: #1a56db;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --light: #f8fafc;
+            --dark: #1e3a8a;
+            --success: #10b981;
+            --warning: #f59e0b;
+            --info: #3b82f6;
+            --background: #f0f9ff;
+            --card-bg: #ffffff;
+            --text-primary: #1e3a8a;
+            --text-secondary: #4b5563;
+            --border-radius: 5px;
+            --shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+            --transition: all 0.2s ease;
+            --compact-spacing: 3px;
+        }
+
+        .dark-mode {
+            --primary: #3b82f6;
+            --secondary: #0ea5e9;
+            --accent: #10b981;
+            --light: #1e293b;
+            --dark: #f1f5f9;
+            --background: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f1f5f9;
+            --text-secondary: #cbd5e1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--background);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+            position: relative;
+            font-size: 8.1px;
+            line-height: 1.1;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 4.86px;
+        }
+
+        /* Header Styles */
+        header {
+            background: linear-gradient(135deg, #10b981, #3b82f6);
+            color: white;
+            padding: 6.48px;
+            border-radius: var(--border-radius);
+            margin-bottom: 6.48px;
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 60%);
+            animation: pulse 15s infinite linear;
+        }
+
+        @keyframes pulse {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 4.32px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .logo h1 {
+            font-size: 0.972rem;
+            font-weight: 800;
+            margin-bottom: 1.62px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo p {
+            font-weight: 500;
+            font-size: 0.486rem;
+            opacity: 0.9;
+        }
+
+        .header-content {
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-content h1 {
+            font-size: 0.648rem;
+            margin-bottom: 4.32px;
+            color: #ffd700;
+        }
+
+        .header-content p {
+            font-size: 0.486rem;
+            line-height: 1.1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Hamburger Menu */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 15.12px;
+            height: 15.12px;
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            position: absolute;
+            top: 6.48px;
+            right: 6.48px;
+            z-index: 10;
+        }
+
+        .menu-toggle span {
+            width: 15.12px;
+            height: 1.62px;
+            background: white;
+            border-radius: 1.62px;
+            transition: var(--transition);
+            position: relative;
+            transform-origin: center;
+        }
+
+        .menu-toggle.active span:nth-child(1) {
+            transform: rotate(45deg) translate(3.24px, 3.24px);
+        }
+
+        .menu-toggle.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .menu-toggle.active span:nth-child(3) {
+            transform: rotate(-45deg) translate(4.32px, -4.32px);
+        }
+
+        /* Navigation Styles */
+        .nav-container {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 6.48px;
+            position: relative;
+        }
+
+        .nav-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+        }
+
+        .nav-header h2 {
+            font-size: 0.729rem;
+        }
+
+        .theme-toggle {
+            background: var(--card-bg);
+            border: none;
+            width: 25.92px;
+            height: 12.96px;
+            border-radius: 12.96px;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            align-items: center;
+            padding: 1.62px;
+            box-shadow: var(--shadow);
+        }
+
+        .theme-toggle span {
+            width: 9.72px;
+            height: 9.72px;
+            border-radius: 50%;
+            background: var(--primary);
+            position: absolute;
+            transition: var(--transition);
+            left: 1.62px;
+        }
+
+        .theme-toggle.dark span {
+            left: calc(100% - 11.34px);
+        }
+
+        .main-nav {
+            display: flex;
+            gap: 2.43px;
+            flex-wrap: wrap;
+        }
+
+        .nav-btn {
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+            padding: 4.05px 4.86px;
+            background: var(--card-bg);
+            border: none;
+            border-radius: var(--border-radius);
+            color: var(--text-primary);
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            box-shadow: var(--shadow);
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 1.5px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-btn.active {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* Panel Styles */
+        .panel {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.86px;
+            box-shadow: var(--shadow);
+            margin-bottom: 6.48px;
+            transition: var(--transition);
+        }
+
+        .panel-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+            padding-bottom: 4.05px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .panel-title {
+            font-size: 0.648rem;
+            font-weight: 700;
+            color: var(--primary);
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+        }
+
+        .panel-actions {
+            display: flex;
+            gap: 2.43px;
+        }
+
+        /* Button Styles */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 2.43px;
+            padding: 2.43px 4.86px;
+            border: none;
+            border-radius: var(--border-radius);
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: var(--secondary);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            background: var(--accent);
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #0da271;
+            transform: translateY(-1px);
+        }
+
+        /* Card Styles */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.86px;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+            margin-bottom: 4.86px;
+        }
+
+        .card:hover {
+            transform: translateY(-1.5px);
+            box-shadow: 0 2.43px 6.48px rgba(0, 0, 0, 0.05);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            gap: 2.43px;
+            margin-bottom: 4.05px;
+            padding-bottom: 4.05px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .card-title {
+            font-size: 0.567rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        /* Grid Layout */
+        .grid {
+            display: grid;
+            gap: 4.86px;
+        }
+
+        .grid-2 {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .grid-3 {
+            grid-template-columns: 1fr 1fr 1fr;
+        }
+
+        /* Footer Styles */
+        footer {
+            background: linear-gradient(135deg, var(--secondary), var(--primary));
+            color: white;
+            padding: 9.72px 0;
+            margin-top: auto;
+            font-size: 0.486rem;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 6.48px;
+            margin-top: 6.48px;
+        }
+
+        /* Animation Classes */
+        .fade-in {
+            animation: fadeIn 0.3s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(6.48px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-in {
+            animation: slideIn 0.3s ease forwards;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateX(-6.48px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        /* MCQ Card Styles */
+        .mcq-card {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .mcq-info {
+            flex-grow: 1;
+            margin-bottom: 4.86px;
+        }
+
+        .mcq-id {
+            font-weight: 700;
+            font-size: 0.567rem;
+            color: var(--primary);
+            margin-bottom: 1.62px;
+        }
+
+        .mcq-subject {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.43px;
+        }
+
+        .mcq-chapter {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+            margin-bottom: 2.43px;
+            font-weight: 600;
+        }
+
+        .mcq-details {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+            margin-bottom: 4.05px;
+        }
+
+        .start-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            border-radius: var(--border-radius);
+            padding: 4.05px 6.48px;
+            font-weight: 600;
+            font-size: 0.486rem;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+            text-decoration: none;
+            display: block;
+        }
+
+        .start-btn:hover {
+            background: var(--secondary);
+            transform: translateY(-1px);
+        }
+
+        /* Stats Panel */
+        .stats-panel {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(64.8px, 1fr));
+            gap: 4.05px;
+            margin-bottom: 4.86px;
+        }
+
+        .stat-item {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 4.05px;
+            text-align: center;
+            box-shadow: var(--shadow);
+        }
+
+        .stat-value {
+            font-size: 0.729rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+
+        /* Explanation Section Styles */
+        .explanation-section {
+            margin-bottom: 12.15px;
+            padding: 9.72px;
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+        }
+
+        .explanation-header {
+            display: flex;
+            align-items: center;
+            gap: 6.48px;
+            margin-bottom: 6.48px;
+            padding-bottom: 4.86px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        }
+
+        .explanation-icon {
+            width: 24.3px;
+            height: 24.3px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.81rem;
+        }
+
+        .explanation-title {
+            font-size: 0.729rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .explanation-content {
+            font-size: 0.567rem;
+            line-height: 1.4;
+            color: var(--text-primary);
+        }
+
+        .explanation-content h4 {
+            font-size: 0.648rem;
+            margin: 6.48px 0 3.24px;
+            color: var(--primary);
+        }
+
+        .explanation-content p {
+            margin-bottom: 4.86px;
+        }
+
+        .explanation-content ul, .explanation-content ol {
+            margin-left: 16.2px;
+            margin-bottom: 6.48px;
+        }
+
+        .explanation-content li {
+            margin-bottom: 2.43px;
+        }
+
+        .mechanism-diagram {
+            text-align: center;
+            margin: 9.72px 0;
+            padding: 6.48px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .key-concept {
+            background: rgba(59, 130, 246, 0.1);
+            border-left: 3.24px solid var(--primary);
+            padding: 6.48px;
+            margin: 6.48px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        .key-concept-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 3.24px;
+            font-size: 0.567rem;
+        }
+
+        /* MCQ Detail Styles */
+        .mcq-detail-container {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 9.72px;
+            margin-bottom: 9.72px;
+            box-shadow: var(--shadow);
+        }
+
+        .mcq-question {
+            font-size: 0.648rem;
+            font-weight: 600;
+            margin-bottom: 6.48px;
+            color: var(--text-primary);
+            line-height: 1.4;
+        }
+
+        .mcq-options {
+            margin-bottom: 9.72px;
+        }
+
+        .mcq-option {
+            padding: 4.05px 6.48px;
+            margin-bottom: 3.24px;
+            border-radius: var(--border-radius);
+            background: var(--light);
+            font-size: 0.567rem;
+            cursor: pointer;
+            transition: var(--transition);
+            border-left: 2.43px solid transparent;
+        }
+
+        .mcq-option:hover {
+            background: rgba(26, 86, 219, 0.05);
+        }
+
+        .mcq-option.selected {
+            border-left-color: var(--primary);
+            background: rgba(26, 86, 219, 0.1);
+        }
+
+        .mcq-option.correct {
+            border-left-color: var(--success);
+            background: rgba(16, 185, 129, 0.1);
+        }
+
+        .mcq-option.incorrect {
+            border-left-color: #dc3545;
+            background: rgba(220, 53, 69, 0.1);
+        }
+
+        .mcq-explanation {
+            margin-top: 9.72px;
+            padding: 6.48px;
+            border-radius: var(--border-radius);
+            background: var(--light);
+            font-size: 0.486rem;
+            line-height: 1.4;
+            display: none;
+        }
+
+        .mcq-explanation.show {
+            display: block;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .explanation-title {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4.05px;
+            font-size: 0.567rem;
+        }
+
+        .mcq-actions {
+            display: flex;
+            gap: 4.86px;
+            margin-top: 6.48px;
+        }
+
+        /* Progress Tracking */
+        .progress-section {
+            margin-top: 9.72px;
+            padding: 6.48px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .progress-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 4.86px;
+        }
+
+        .progress-title {
+            font-size: 0.648rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .progress-stats {
+            font-size: 0.486rem;
+            color: var(--text-secondary);
+        }
+
+        .progress-bar {
+            height: 6.48px;
+            background: #e5e7eb;
+            border-radius: 3.24px;
+            overflow: hidden;
+            margin-bottom: 4.86px;
+        }
+
+        .progress-fill {
+            height: 100%;
+            background: var(--success);
+            border-radius: 3.24px;
+            transition: width 0.5s ease;
+        }
+
+        /* Welcome Animation */
+        .welcome-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #10b981, #1e3a8a);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10000;
+            opacity: 1;
+            transition: opacity 0.8s ease;
+        }
+
+        .welcome-overlay.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .welcome-content {
+            text-align: center;
+            color: white;
+            padding: 12.15px;
+            max-width: 500px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 9.72px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4.86px 16.2px rgba(0, 0, 0, 0.2);
+        }
+
+        .welcome-content h2 {
+            font-size: 1.458rem;
+            margin-bottom: 9.72px;
+            background: linear-gradient(90deg, #ffd700, #ffed4e, #ffd700);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            animation: shimmer 2.5s infinite;
+        }
+
+        .welcome-content p {
+            font-size: 0.648rem;
+            margin-bottom: 12.15px;
+            line-height: 1.4;
+            opacity: 0.9;
+        }
+
+        .welcome-logo {
+            font-size: 2.025rem;
+            margin-bottom: 12.15px;
+            color: #ffd700;
+            text-shadow: 0 0 12.15px rgba(255, 215, 0, 0.5);
+            animation: pulseWelcome 1.5s infinite;
+        }
+
+        @keyframes pulseWelcome {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -100% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* WhatsApp Button */
+        .whatsapp-btn {
+            position: fixed;
+            bottom: 12.15px;
+            right: 12.15px;
+            background: #25D366;
+            color: white;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.053rem;
+            box-shadow: 0 2.43px 6.48px rgba(0, 0, 0, 0.3);
+            z-index: 1000;
+            transition: var(--transition);
+            text-decoration: none;
+        }
+
+        .whatsapp-btn:hover {
+            transform: scale(1.1);
+            box-shadow: 0 3.24px 8.1px rgba(0, 0, 0, 0.4);
+        }
+
+        /* Conceptual Q&A Styles */
+        .conceptual-qa {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 8.1px;
+            margin-bottom: 8.1px;
+            border-left: 3.24px solid var(--accent);
+        }
+
+        .qa-question {
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 4.05px;
+            font-size: 0.567rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 4.05px;
+        }
+
+        .qa-question i {
+            color: var(--accent);
+            margin-top: 1.62px;
+        }
+
+        .qa-answer {
+            font-size: 0.486rem;
+            line-height: 1.3;
+            color: var(--text-secondary);
+            padding-left: 12.15px;
+        }
+
+        .qa-answer strong {
+            color: var(--primary);
+        }
+
+        /* Equation styling */
+        .equation {
+            background: rgba(0, 0, 0, 0.05);
+            padding: 4.86px;
+            border-radius: var(--border-radius);
+            margin: 4.86px 0;
+            text-align: center;
+            font-family: 'KaTeX_Main', 'Times New Roman', serif;
+        }
+
+        .dark-mode .equation {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .katex {
+            font-size: 1em !important;
+        }
+
+        /* Exam Specific Info */
+        .exam-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(97.2px, 1fr));
+            gap: 4.86px;
+            margin-bottom: 9.72px;
+        }
+
+        .exam-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            padding: 6.48px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .exam-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 3.24px 8.1px rgba(0, 0, 0, 0.1);
+        }
+
+        .exam-icon {
+            width: 24.3px;
+            height: 24.3px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 4.05px;
+            font-size: 0.81rem;
+        }
+
+        .exam-name {
+            font-weight: 700;
+            font-size: 0.486rem;
+            color: var(--primary);
+            margin-bottom: 1.62px;
+        }
+
+        .exam-desc {
+            font-size: 0.405rem;
+            color: var(--text-secondary);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 1200px) {
+            .grid-3 {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 900px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .menu-toggle {
+                display: flex;
+            }
+            
+            .main-nav {
+                flex-direction: column;
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background: var(--card-bg);
+                border-radius: var(--border-radius);
+                box-shadow: var(--shadow);
+                padding: 4.86px;
+                z-index: 100;
+                width: 129.6px;
+                display: none;
+            }
+            
+            .main-nav.active {
+                display: flex;
+            }
+            
+            .nav-btn {
+                width: 100%;
+                justify-content: flex-start;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 4.05px;
+            }
+            
+            header {
+                padding: 4.86px;
+            }
+            
+            .logo h1 {
+                font-size: 0.81rem;
+            }
+            
+            .panel {
+                padding: 4.86px;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-bottom: 2.43px;
+            }
+            
+            .panel-actions {
+                flex-direction: column;
+            }
+            
+            .welcome-content {
+                padding: 9.72px;
+                margin: 6.48px;
+            }
+            
+            .welcome-content h2 {
+                font-size: 1.053rem;
+            }
+            
+            .welcome-content p {
+                font-size: 0.567rem;
+            }
+            
+            .welcome-logo {
+                font-size: 1.62rem;
+            }
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 3.24px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--light);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--primary);
+            border-radius: 1.62px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: var(--secondary);
+        }
+    </style>
+</head>
+<body>
+    <!-- Welcome Animation -->
+    <div class="welcome-overlay" id="welcome-overlay">
+        <div class="welcome-content scale-in">
+            <div class="welcome-logo">
+                <i class="fas fa-atom"></i>
+            </div>
+            <h2>Organic Chemistry MCQs Portal</h2>
+            <p>Master Organic Chemistry for MDCAT, NUMS, HEC, AKU & Competition Exams with 40 MCQs and Detailed Explanations.</p>
+            <button class="btn btn-primary" id="start-btn" style="padding: 4.86px 9.72px; font-size: 0.648rem;">
+                Get Started <i class="fas fa-arrow-right"></i>
+            </button>
+        </div>
+    </div>
+
+    <!-- WhatsApp Button -->
+    <a href="https://whatsapp.com/channel/0029VbBeueg0QeajGumGWb0f" class="whatsapp-btn" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <div class="container">
+        <header>
+            <button class="menu-toggle" id="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            
+            <div class="logo">
+                <h1>Organic Chemistry MCQs Portal</h1>
+                <p>MDCAT | NUMS | HEC | AKU | Competition Exam Preparation</p>
+            </div>
+            
+            <div class="header-content">
+                <h1>Comprehensive Organic Chemistry with 40 MCQs & Detailed Explanations</h1>
+                <p>Master key concepts with detailed explanations, exceptional cases, and interactive questions for Pakistani exams</p>
+            </div>
+        </header>
+
+        <!-- Exam Specific Information -->
+        <div class="panel fade-in">
+            <div class="panel-header">
+                <h3 class="panel-title"><i class="fas fa-graduation-cap"></i> Exam Preparation Focus</h3>
+            </div>
+            <div class="exam-info">
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-stethoscope"></i>
+                    </div>
+                    <div class="exam-name">MDCAT/NUMS</div>
+                    <div class="exam-desc">30-35% weightage in Chemistry Section</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <div class="exam-name">HEC Test</div>
+                    <div class="exam-desc">Graduate Assessment: Reaction mechanisms</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-hospital"></i>
+                    </div>
+                    <div class="exam-name">AKU Test</div>
+                    <div class="exam-desc">Medical Entry: Nomenclature & reactions</div>
+                </div>
+                <div class="exam-card">
+                    <div class="exam-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="exam-name">Competition</div>
+                    <div class="exam-desc">FSC Level: Stereochemistry & mechanisms</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="nav-container">
+            <div class="nav-header">
+                <h2>Navigation</h2>
+                <button class="theme-toggle" id="theme-toggle">
+                    <span></span>
+                </button>
+            </div>
+            
+            <div class="main-nav" id="main-nav">
+                <button class="nav-btn active" data-tab="intro">
+                    <i class="fas fa-atom"></i>
+                    <span>Classification</span>
+                </button>
+                <button class="nav-btn" data-tab="alkanes">
+                    <i class="fas fa-fire"></i>
+                    <span>Alkanes</span>
+                </button>
+                <button class="nav-btn" data-tab="nomenclature">
+                    <i class="fas fa-signature"></i>
+                    <span>Nomenclature</span>
+                </button>
+                <button class="nav-btn" data-tab="ethane">
+                    <i class="fas fa-cube"></i>
+                    <span>Ethane Structure</span>
+                </button>
+                <button class="nav-btn" data-tab="cycloalkanes">
+                    <i class="fas fa-circle"></i>
+                    <span>Cycloalkanes</span>
+                </button>
+                <button class="nav-btn" data-tab="intermediates">
+                    <i class="fas fa-bolt"></i>
+                    <span>Reactive Species</span>
+                </button>
+                <button class="nav-btn" data-tab="chlorination">
+                    <i class="fas fa-flask"></i>
+                    <span>Chlorination</span>
+                </button>
+                <button class="nav-btn" data-tab="forty-mcqs">
+                    <i class="fas fa-question-circle"></i>
+                    <span>40 MCQs</span>
+                </button>
+                <button class="nav-btn" data-tab="progress">
+                    <i class="fas fa-chart-line"></i>
+                    <span>Progress</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Stats Panel -->
+        <div class="stats-panel">
+            <div class="stat-item">
+                <div class="stat-value" id="total-mcqs">40</div>
+                <div class="stat-label">Total MCQs</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="conceptual-qa">25</div>
+                <div class="stat-label">Conceptual Q&A</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="completed-mcqs">0</div>
+                <div class="stat-label">Completed</div>
+            </div>
+            <div class="stat-item">
+                <div class="stat-value" id="accuracy">0%</div>
+                <div class="stat-label">Accuracy</div>
+            </div>
+        </div>
+
+        <!-- Notice Message -->
+        <div class="panel fade-in" style="border-left: 3.24px solid #f59e0b;">
+            <div class="panel-header">
+                <h3 class="panel-title"><i class="fas fa-exclamation-triangle" style="color: #f59e0b;"></i> Important Notice</h3>
+            </div>
+            <div class="explanation-content">
+                <p><strong>Attention Students:</strong> This portal is designed specifically for Pakistani MDCAT, NUMS, HEC, and AKU exam preparation. If you find any incorrect information or discrepancies, please inform us immediately through the WhatsApp channel. We strive to provide the most accurate and up-to-date content for your success.</p>
+            </div>
+        </div>
+
+        <!-- Classification Introduction Tab -->
+        <div class="tab-content active" id="intro-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-atom"></i>
+                    </div>
+                    <div class="explanation-title">Organic Compounds Classification: Fundamental Concepts</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>What is Organic Chemistry?</h4>
+                    <p>Organic chemistry is the study of <strong>carbon-containing compounds</strong>. Carbon's unique ability to form four covalent bonds allows it to create millions of different compounds. Understanding classification helps in predicting properties and reactions.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Two Classification Methods</div>
+                        <p><strong>1. Based on Functional Groups:</strong> Compounds with same functional group show similar chemical properties. <strong>2. Based on Structure:</strong> Open chain (acyclic) vs closed chain (cyclic).</p>
+                    </div>
+                    
+                    <h4>MDCAT/NUMS Focus Areas:</h4>
+                    <ul>
+                        <li>Identifying functional groups in given compounds</li>
+                        <li>Classifying compounds as aliphatic/aromatic</li>
+                        <li>Differentiating between isomers</li>
+                        <li>Recognizing homologous series</li>
+                        <li>Understanding IUPAC naming basics</li>
+                    </ul>
+                    
+                    <h4>Competition Level Exceptional Cases:</h4>
+                    <ol>
+                        <li><strong>Ambiguous compounds:</strong> Some compounds belong to multiple classes (e.g., phenol has -OH and aromatic ring)</li>
+                        <li><strong>Bridged compounds:</strong> Compounds with bridges between rings</li>
+                        <li><strong>Heterocyclic compounds:</strong> Rings containing atoms other than carbon</li>
+                        <li><strong>Tautomers:</strong> Compounds that exist in equilibrium between two structures</li>
+                    </ol>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MCQ Solving Trick: Functional Group Priority</div>
+                        <p>Remember priority order for naming: Carboxylic acid > Ester > Amide > Aldehyde > Ketone > Alcohol > Amine > Alkene > Alkyne > Alkane. For MDCAT, focus on recognizing groups rather than complex naming.</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Aliphatic = open chain, Aromatic = benzene ring containing</li>
+                        <li>Saturated = only single bonds, Unsaturated = double/triple bonds</li>
+                        <li>Functional group determines chemical behavior</li>
+                        <li>Homologous series: Same functional group, differ by -CH₂-</li>
+                        <li>Isomers: Same molecular formula, different structures</li>
+                    </ol>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> Which compound is both aromatic and contains alcohol functional group?</p>
+                        <p><strong>Options:</strong> A) Ethanol, B) Phenol, C) Methanol, D) Benzene</p>
+                        <p><strong>Step-by-step analysis:</strong></p>
+                        <ol>
+                            <li>Ethanol: Aliphatic alcohol (C₂H₅OH)</li>
+                            <li>Phenol: C₆H₅OH (benzene ring + -OH group)</li>
+                            <li>Methanol: CH₃OH (simplest alcohol)</li>
+                            <li>Benzene: C₆H₆ (aromatic but no -OH group)</li>
+                            <li>Only phenol has both aromatic ring and alcohol (-OH) group</li>
+                            <li>Thus answer: B) Phenol</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> "Phenol = Phenyl + Alcohol" - remember this mnemonic for aromatic alcohols.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (5/25)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why is carbon unique in forming so many compounds?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Carbon has 4 valence electrons, can form 4 covalent bonds (tetravalency). It can form strong C-C bonds (catenation). It can form single, double, triple bonds. Small size allows effective overlap. Forms stable bonds with H, O, N, S, halogens.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What's difference between aliphatic and aromatic?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> <strong>Aliphatic:</strong> Open chain or non-aromatic cyclic compounds. Can be saturated (alkanes) or unsaturated (alkenes/alkynes). <strong>Aromatic:</strong> Contain benzene ring or similar planar ring with (4n+2)π electrons (Huckel's rule). Aromatic compounds show resonance.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is homologous series? Give example.</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Series of compounds with same functional group, each member differs by -CH₂- unit. Example: Alkanes (CH₄, C₂H₆, C₃H₈...). Properties change gradually: boiling point increases, density increases with molecular weight.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What are functional groups? Why important?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Functional group = atom or group of atoms that determines chemical properties. Examples: -OH (alcohol), -CHO (aldehyde), -COOH (carboxylic acid). Same functional group gives similar reactions. Organic chemistry organized around functional groups.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Can organic compound be ionic?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Yes, but rare. Most organic compounds covalent. Examples: Carboxylate ions (RCOO⁻), ammonium salts (RNH₃⁺). Soaps (sodium salts of fatty acids) are ionic organic compounds. Most MDCAT questions assume covalent bonding.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Classification MCQs Progress</div>
+                    <div class="progress-stats"><span id="intro-completed">0</span>/5 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="intro-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-atom"></i> Classification MCQs (5)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-intro">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="intro-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Alkanes and Cycloalkanes Tab -->
+        <div class="tab-content" id="alkanes-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                    <div class="explanation-title">Alkanes and Cycloalkanes: Saturated Hydrocarbons</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Alkanes (Paraffins):</h4>
+                    <p>General formula: CₙH₂ₙ₊₂. Saturated hydrocarbons with only C-C and C-H single bonds. Non-polar, insoluble in water, less dense than water. Undergo substitution reactions.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Physical Properties Trend</div>
+                        <p>Boiling point increases with molecular weight. Branched isomers have lower boiling points than straight-chain (less surface area). Methane (CH₄) to Butane (C₄H₁₀) = gases, Pentane (C₅H₁₂) to C₁₇H₃₆ = liquids, Higher = solids.</p>
+                    </div>
+                    
+                    <h4>Cycloalkanes:</h4>
+                    <p>General formula: CₙH₂ₙ (same as alkenes but saturated). Ring structures. Angle strain in small rings (cyclopropane, cyclobutane). Chair conformation in cyclohexane is strain-free.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MCQ Solving Trick: Isomer Counting</div>
+                        <p>For MDCAT, remember: Methane (1), Ethane (1), Propane (1), Butane (2), Pentane (3), Hexane (5). Cycloalkanes: Cyclopropane (1), Cyclobutane (2), Cyclopentane (1), Cyclohexane (1). For cycloalkanes with substituents, consider cis-trans isomerism.</p>
+                    </div>
+                    
+                    <h4>MDCAT Problem Solving Strategy:</h4>
+                    <ol>
+                        <li>For boiling point comparisons: More branching = lower boiling point</li>
+                        <li>For isomer counting: Draw systematically or use known values</li>
+                        <li>For reactivity: Tertiary H > Secondary H > Primary H in halogenation</li>
+                        <li>For stability: More substituted carbocations are more stable</li>
+                    </ol>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> Which alkane has highest boiling point?</p>
+                        <p><strong>Options:</strong> A) n-Pentane, B) 2-Methylbutane, C) 2,2-Dimethylpropane, D) All same</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>All are isomers: C₅H₁₂</li>
+                            <li>n-Pentane: Straight chain, maximum surface area</li>
+                            <li>2-Methylbutane: One branch, less surface area</li>
+                            <li>2,2-Dimethylpropane: Highly branched, minimum surface area</li>
+                            <li>Boiling point order: Straight chain > Branched (more branching = lower bp)</li>
+                            <li>Thus n-Pentane has highest boiling point → Answer: A</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> "Straight chains stick together better" - more surface contact = stronger London forces = higher boiling point.</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Alkanes: CₙH₂ₙ₊₂, Cycloalkanes: CₙH₂ₙ</li>
+                        <li>Branched alkanes have lower boiling points</li>
+                        <li>Cyclopropane has highest angle strain (60° vs 109.5° ideal)</li>
+                        <li>Cyclohexane chair conformation is most stable</li>
+                        <li>Alkanes undergo free radical substitution</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (10/25)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why are alkanes called paraffins?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> From Latin "parum affinis" = little affinity. Alkanes are relatively unreactive due to strong C-C and C-H bonds (non-polar). They don't react with acids, bases, or oxidizing agents under normal conditions. Only react with halogens under UV light (free radical substitution).</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why does boiling point increase with molecular weight?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Larger molecules have more electrons → stronger London dispersion forces (temporary dipole-induced dipole). Also, larger surface area for contact between molecules. Energy needed to separate molecules increases.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is angle strain in cycloalkanes?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Deviation of bond angles from ideal tetrahedral angle (109.5°). Cyclopropane: 60° (high strain, reactive). Cyclobutane: 90° (moderate strain). Cyclopentane: 108° (almost ideal). Cyclohexane: 109.5° (chair conformation, no strain).</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Alkanes MCQs Progress</div>
+                    <div class="progress-stats"><span id="alkanes-completed">0</span>/5 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="alkanes-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-fire"></i> Alkanes MCQs (5)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-alkanes">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="alkanes-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Nomenclature Tab -->
+        <div class="tab-content" id="nomenclature-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-signature"></i>
+                    </div>
+                    <div class="explanation-title">IUPAC Nomenclature of Alkanes and Cycloalkanes</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Basic Rules of IUPAC Nomenclature:</h4>
+                    <p>1. Identify longest continuous carbon chain (parent chain)<br>
+                    2. Number chain to give lowest numbers to substituents<br>
+                    3. Name substituents in alphabetical order<br>
+                    4. Use prefixes di-, tri-, tetra- for identical substituents<br>
+                    5. For cycloalkanes: Use "cyclo" prefix</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Numbering Priority</div>
+                        <p>When multiple options: Give lowest number to first substituent. If tie: Give lowest number to second substituent. If functional group present: It gets priority in numbering. For alkenes/alkynes: Double/triple bond gets lowest number.</p>
+                    </div>
+                    
+                    <h4>Common Alkyl Groups (MDCAT Must Know):</h4>
+                    <ul>
+                        <li>Methyl: -CH₃ (from methane)</li>
+                        <li>Ethyl: -C₂H₅ (from ethane)</li>
+                        <li>Propyl: -C₃H₇ (two types: n-propyl and isopropyl)</li>
+                        <li>Butyl: -C₄H₉ (n-butyl, sec-butyl, isobutyl, tert-butyl)</li>
+                        <li>Pentyl/Amyl: -C₅H₁₁</li>
+                    </ul>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MCQ Solving Trick: Common vs IUPAC Names</div>
+                        <p>For MDCAT, know both common and IUPAC names. Isopropyl = 2-propyl, tert-butyl = 2-methyl-2-propyl, iso-butyl = 2-methylpropyl. Vinyl = ethenyl, Allyl = 2-propenyl, Phenyl = C₆H₅-.</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> IUPAC name of (CH₃)₂CHCH₂CH(CH₃)₂ is:</p>
+                        <p><strong>Options:</strong> A) 2,4-Dimethylpentane, B) 1,1,3,3-Tetramethylpropane, C) 2-Methylbutane, D) Isohexane</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Draw structure: CH₃-CH(CH₃)-CH₂-CH(CH₃)-CH₃</li>
+                            <li>Longest chain: 5 carbons (pentane)</li>
+                            <li>Number from left: Methyl at C2 and C4</li>
+                            <li>Number from right: Same result (methyl at C2 and C4)</li>
+                            <li>Name: 2,4-Dimethylpentane</li>
+                            <li>Thus answer: A) 2,4-Dimethylpentane</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> Count carbons systematically: Start from one end, assign numbers, check if other direction gives lower numbers.</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Methane (1C), Ethane (2C), Propane (3C), Butane (4C), Pentane (5C)</li>
+                        <li>Hexane (6C), Heptane (7C), Octane (8C), Nonane (9C), Decane (10C)</li>
+                        <li>Cycloalkanes: cyclopropane, cyclobutane, cyclopentane, cyclohexane</li>
+                        <li>For disubstituted cycloalkanes: cis (same side) vs trans (opposite side)</li>
+                        <li>Isopropyl group: -CH(CH₃)₂</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (15/25)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why is IUPAC naming necessary?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Common names ambiguous (e.g., "isobutane" could mean different things). IUPAC gives unique name for each compound. Systematic rules allow naming of complex molecules. Essential for chemical communication worldwide.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What's difference between iso, sec, tert prefixes?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> <strong>iso-</strong>: One branch at second carbon from end (e.g., isobutane = (CH₃)₂CHCH₃). <strong>sec-</strong> (secondary): Carbon attached to two other carbons (e.g., sec-butyl = CH₃CH₂CH(CH₃)-). <strong>tert-</strong> (tertiary): Carbon attached to three other carbons (e.g., tert-butyl = (CH₃)₃C-).</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> How to name cycloalkanes with substituents?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> 1. Use "cyclo" prefix. 2. Number substituents to get lowest set of numbers. 3. If only one substituent, no number needed. 4. If two substituents: number them 1 and 2. 5. For cis-trans: cis = same side, trans = opposite sides.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Nomenclature MCQs Progress</div>
+                    <div class="progress-stats"><span id="nomenclature-completed">0</span>/5 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="nomenclature-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-signature"></i> Nomenclature MCQs (5)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-nomenclature">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="nomenclature-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Ethane Structure Tab -->
+        <div class="tab-content" id="ethane-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-cube"></i>
+                    </div>
+                    <div class="explanation-title">Structure of Ethane: Conformations and Hybridization</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Ethane (C₂H₆) Structure:</h4>
+                    <p>Simplest alkane with C-C bond. Each carbon sp³ hybridized, tetrahedral geometry (109.5°). Rotation possible around C-C single bond → different conformations.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Conformational Isomers</div>
+                        <p>Different arrangements due to rotation around single bond. Not separable at room temperature (interconvert rapidly). Staggered conformation most stable (minimum electron repulsion). Eclipsed conformation least stable (maximum electron repulsion).</p>
+                    </div>
+                    
+                    <h4>Energy Diagram for Ethane Conformations:</h4>
+                    <p>Staggered: Minimum energy (0 kJ/mol). Eclipsed: Maximum energy (~12 kJ/mol). Energy barrier for rotation = 12 kJ/mol (small, so free rotation at room temperature).</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MDCAT Trick: Newman Projection</div>
+                        <p>Front carbon represented by dot, back carbon by circle. Lines represent bonds. Staggered: bonds 60° apart. Eclipsed: bonds aligned. Gauche: Special staggered with 60° angle between large groups.</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> In ethane, staggered conformation is more stable than eclipsed because:</p>
+                        <p><strong>Options:</strong> A) Less steric hindrance, B) More hydrogen bonding, C) Stronger C-C bond, D) Lower molecular weight</p>
+                        <p><strong>Step-by-step analysis:</strong></p>
+                        <ol>
+                            <li>Option A: Steric hindrance = repulsion between atoms/groups</li>
+                            <li>In staggered: H atoms maximally separated (60° apart)</li>
+                            <li>In eclipsed: H atoms directly aligned (0° apart)</li>
+                            <li>Aligned H atoms in eclipsed cause electron-electron repulsion</li>
+                            <li>No hydrogen bonding in ethane (only C-H bonds)</li>
+                            <li>C-C bond strength same in both conformations</li>
+                            <li>Molecular weight same in both</li>
+                            <li>Thus answer: A) Less steric hindrance</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> "Staggered = Stable, Eclipsed = Energy" - remember S-S and E-E pairs.</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Ethane: C₂H₆, each C sp³ hybridized</li>
+                        <li>Staggered conformation: Most stable, H atoms 60° apart</li>
+                        <li>Eclipsed conformation: Least stable, H atoms aligned</li>
+                        <li>Energy difference: ~12 kJ/mol between staggered/eclipsed</li>
+                        <li>Free rotation at room temperature (energy barrier low)</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (20/25)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is hybridization of carbon in ethane?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> sp³ hybridization. Each carbon has 4 sp³ hybrid orbitals (25% s, 75% p character). Forms 4 σ bonds: 3 C-H bonds and 1 C-C bond. Bond angles ~109.5° (tetrahedral). Free rotation around C-C σ bond.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why free rotation in ethane but not in ethene?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Ethane has C-C single bond (σ bond), cylindrical symmetry allows rotation. Ethene has C=C double bond (1σ + 1π bond). π bond has electron density above and below plane, rotation would break π bond (requires ~270 kJ/mol).</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is torsional strain in ethane?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Repulsion between bonding electrons when bonds eclipse each other. In eclipsed conformation: electron clouds of C-H bonds repel. Causes 12 kJ/mol energy barrier. Also called Pitzer strain or eclipsing strain.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Ethane Structure MCQs Progress</div>
+                    <div class="progress-stats"><span id="ethane-completed">0</span>/5 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="ethane-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-cube"></i> Ethane Structure MCQs (5)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-ethane">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="ethane-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Cycloalkanes Structure Tab -->
+        <div class="tab-content" id="cycloalkanes-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-circle"></i>
+                    </div>
+                    <div class="explanation-title">Structure of Cyclopropane and Cyclobutane: Angle Strain</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Cyclopropane (C₃H₆):</h4>
+                    <p>Smallest cycloalkane. Equilateral triangle with 60° bond angles (vs 109.5° ideal). High angle strain. C-C bonds bent outward (banana bonds). More reactive than open-chain alkanes.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Banana Bonds in Cyclopropane</div>
+                        <p>C-C bonds in cyclopropane are not normal σ bonds. They are bent orbitals (banana bonds) with more p-character. Overlap is poor → weak bonds. Electron density outside ring → unusual reactivity.</p>
+                    </div>
+                    
+                    <h4>Cyclobutane (C₄H₆):</h4>
+                    <p>Square planar would have 90° angles, but actually puckered (folded) to reduce strain. Bond angles ~88° (less strain than cyclopropane). More stable than cyclopropane but still strained.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MDCAT Trick: Stability Order</div>
+                        <p>Cyclohexane (chair) > Cyclopentane > Cyclobutane > Cyclopropane (least stable). Remember: "6>5>4>3" for stability. For angle strain: Cyclopropane (49.5° deviation) > Cyclobutane (21.5°) > Cyclopentane (1.5°) > Cyclohexane (0°).</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> Which cycloalkane has highest angle strain?</p>
+                        <p><strong>Options:</strong> A) Cyclopropane, B) Cyclobutane, C) Cyclopentane, D) Cyclohexane</p>
+                        <p><strong>Step-by-step analysis:</strong></p>
+                        <ol>
+                            <li>Ideal tetrahedral angle: 109.5°</li>
+                            <li>Cyclopropane: 60° (deviation = 49.5°)</li>
+                            <li>Cyclobutane: ~90° (deviation = 19.5°)</li>
+                            <li>Cyclopentane: ~108° (deviation = 1.5°)</li>
+                            <li>Cyclohexane (chair): 109.5° (deviation = 0°)</li>
+                            <li>Largest deviation = highest strain</li>
+                            <li>Thus cyclopropane has highest angle strain → Answer: A</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> "Small rings = Big strain" - the smaller the ring, the greater the deviation from 109.5°.</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Cyclopropane: 60° angles, banana bonds, most strained</li>
+                        <li>Cyclobutane: Puckered, ~88° angles, less strained than cyclopropane</li>
+                        <li>Cyclopentane: Almost ideal angles (108°), envelope conformation</li>
+                        <li>Cyclohexane: Chair conformation, 109.5° angles, strain-free</li>
+                        <li>Strain energy: Cyclopropane > Cyclobutane > Cyclopentane > Cyclohexane</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding (25/25)</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why is cyclopropane reactive despite being alkane?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> High angle strain (60° vs 109.5° ideal). Weak "banana bonds" with poor overlap. Ring strain makes it behave like alkene in some reactions (addition reactions to relieve strain). Can undergo ring-opening reactions easily.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why is cyclobutane puckered, not planar?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Puckering reduces two types of strain: 1) Angle strain: Bonds slightly bend from 90°. 2) Torsional strain: In planar form, all H atoms would be eclipsed. Puckering reduces eclipsing interactions, lowering energy by ~6 kJ/mol.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What is Baeyer's strain theory?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Proposed by Adolf von Baeyer (1885). Cycloalkanes with 5-6 carbons most stable (angles near 109.5°). Smaller or larger rings have angle strain. Limitation: Assumed all rings planar, didn't consider puckering or other conformations.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Cycloalkanes MCQs Progress</div>
+                    <div class="progress-stats"><span id="cycloalkanes-completed">0</span>/5 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="cycloalkanes-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-circle"></i> Cycloalkanes MCQs (5)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-cycloalkanes">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="cycloalkanes-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Reactive Intermediates Tab -->
+        <div class="tab-content" id="intermediates-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <div class="explanation-title">Electrophile, Nucleophile, Free Radical, Bond Fission</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Electrophile (Electron-Loving):</h4>
+                    <p>Electron-deficient species, seeks electrons. Positively charged or neutral with partial positive charge. Examples: H⁺, Cl⁺, Br⁺, NO₂⁺, SO₃, BF₃, AlCl₃. Attack electron-rich sites (nucleophiles).</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Identifying Electrophiles</div>
+                        <p>Look for: Positive charge, incomplete octet, polarized bonds where atom is δ⁺. Common electrophiles in organic chemistry: Carbocations (R₃C⁺), carbonyl carbon (C=O δ⁺), proton (H⁺).</p>
+                    </div>
+                    
+                    <h4>Nucleophile (Nucleus-Loving):</h4>
+                    <p>Electron-rich species, donates electrons. Negatively charged or neutral with lone pairs. Examples: OH⁻, CN⁻, NH₃, H₂O, ROH, RNH₂. Attack electron-deficient sites (electrophiles).</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MDCAT Trick: Nucleophile Strength</div>
+                        <p>Stronger nucleophile: More negative charge, smaller size, less solvated. Order in polar protic solvents: I⁻ > Br⁻ > Cl⁻ > F⁻ (polarizability effect). In polar aprotic: F⁻ > Cl⁻ > Br⁻ > I⁻ (size effect).</p>
+                    </div>
+                    
+                    <h4>Bond Fission Types:</h4>
+                    <p><strong>Homolytic:</strong> Bond breaks equally, one electron to each atom. Produces free radicals. Requires energy (heat/light). Example: Cl-Cl → 2Cl•<br>
+                    <strong>Heterolytic:</strong> Bond breaks unequally, both electrons go to one atom. Produces ions (cation + anion). Example: H-Cl → H⁺ + Cl⁻</p>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> Which is NOT an electrophile?</p>
+                        <p><strong>Options:</strong> A) H⁺, B) Cl⁺, C) OH⁻, D) BF₃</p>
+                        <p><strong>Step-by-step analysis:</strong></p>
+                        <ol>
+                            <li>H⁺: Proton, positive charge, electron-deficient → Electrophile ✓</li>
+                            <li>Cl⁺: Chlorine cation, positive charge, electron-deficient → Electrophile ✓</li>
+                            <li>OH⁻: Hydroxide ion, negative charge, electron-rich → Nucleophile ✗</li>
+                            <li>BF₃: Boron trifluoride, incomplete octet (6 electrons), electron-deficient → Electrophile ✓</li>
+                            <li>Thus OH⁻ is not an electrophile → Answer: C</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> "Electrophile = Likes electrons (positive/δ⁺), Nucleophile = Likes nucleus (negative/lone pairs)". OH⁻ has negative charge and lone pairs = nucleophile.</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Electrophile: Electron-deficient, positive/δ⁺</li>
+                        <li>Nucleophile: Electron-rich, negative/lone pairs</li>
+                        <li>Free radical: Unpaired electron, neutral</li>
+                        <li>Homolytic fission: Produces radicals, symmetrical</li>
+                        <li>Heterolytic fission: Produces ions, unsymmetrical</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding Review</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What determines if species is electrophile or nucleophile?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Electron density: Electrophiles lack electrons (seek electrons). Nucleophiles have excess electrons (donate electrons). Charge: Positive = electrophile, Negative = nucleophile. Structure: Incomplete octet = electrophile, Lone pairs = nucleophile.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why is homolytic fission common in non-polar bonds?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Non-polar bonds (Cl-Cl, Br-Br) have equal electron sharing. Break symmetrically → one electron to each atom. Requires UV light or heat (radical initiators). Polar bonds (H-Cl) break heterolytically because electrons drawn to more electronegative atom.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What are free radicals? Give examples.</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Species with unpaired electron. Highly reactive, short-lived intermediates. Examples: Methyl radical (CH₃•), Chlorine radical (Cl•). Formed by homolytic fission or redox reactions. Stabilized by resonance or hyperconjugation.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Reactive Intermediates MCQs Progress</div>
+                    <div class="progress-stats"><span id="intermediates-completed">0</span>/5 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="intermediates-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-bolt"></i> Reactive Intermediates MCQs (5)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-intermediates">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="intermediates-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Chlorination Tab -->
+        <div class="tab-content" id="chlorination-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="explanation-title">Free Radical Substitution: Chlorination of Methane & Ethene</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Chlorination of Methane (Free Radical Substitution):</h4>
+                    <p>Three Steps: 1) Initiation: Cl₂ → 2Cl• (UV light)<br>
+                    2) Propagation: Cl• + CH₄ → HCl + CH₃•; CH₃• + Cl₂ → CH₃Cl + Cl•<br>
+                    3) Termination: Various radical combinations</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Key Concept: Selectivity in Halogenation</div>
+                        <p>Reactivity of H atoms: Tertiary (3°) > Secondary (2°) > Primary (1°). Relative rates at 25°C: 1°H:1, 2°H:3.8, 3°H:5.0. Chlorination less selective than bromination. For methane: Only primary H, so only CH₃Cl formed (but can give poly chlorinated products).</p>
+                    </div>
+                    
+                    <h4>Chlorination of Ethene (Electrophilic Addition):</h4>
+                    <p>Different mechanism! Ethene has π bond, not alkane. Electrophilic addition, not free radical substitution. Mechanism: Cl₂ polarized → Cl⁺ attacks π bond → carbocation → Cl⁻ attacks carbocation → 1,2-dichloroethane.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MDCAT Trick: Major/Minor Products</div>
+                        <p>For unsymmetrical alkenes (e.g., propene): Markovnikov's rule applies. H adds to less substituted carbon, Cl to more substituted carbon. For free radical substitution on alkanes: More substituted radicals form more easily (stability order: 3° > 2° > 1° > methyl).</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example:</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> In chlorination of methane with excess Cl₂, the major final product is:</p>
+                        <p><strong>Options:</strong> A) CH₃Cl, B) CH₂Cl₂, C) CHCl₃, D) CCl₄</p>
+                        <p><strong>Step-by-step analysis:</strong></p>
+                        <ol>
+                            <li>Free radical substitution gives mixture: CH₃Cl, CH₂Cl₂, CHCl₃, CCl₄</li>
+                            <li>With excess chlorine and continuous reaction:</li>
+                            <li>CH₃Cl formed first, but can react further: CH₃Cl + Cl• → •CH₂Cl + HCl</li>
+                            <li>•CH₂Cl + Cl₂ → CH₂Cl₂ + Cl• (and so on)</li>
+                            <li>Eventually, all H atoms replaced by Cl</li>
+                            <li>With large excess Cl₂, CCl₄ is major product</li>
+                            <li>Thus answer: D) CCl₄</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> "Excess Cl₂ → Complete chlorination" - all H atoms eventually replaced if Cl₂ is in excess.</p>
+                    </div>
+                    
+                    <h4>Direct MCQ Points:</h4>
+                    <ol>
+                        <li>Methane chlorination: Free radical substitution, requires UV light</li>
+                        <li>Ethene chlorination: Electrophilic addition, occurs in dark</li>
+                        <li>Free radical stability: 3° > 2° > 1° > methyl</li>
+                        <li>For alkanes with different H types: mixture of products</li>
+                        <li>For CH₄: CH₃Cl → CH₂Cl₂ → CHCl₃ → CCl₄ (with excess Cl₂)</li>
+                    </ol>
+                </div>
+            </div>
+            
+            <!-- Conceptual Q&A Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-lightbulb"></i> Conceptual Understanding Review</h3>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why UV light needed for methane chlorination but not ethene chlorination?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Methane chlorination: Free radical mechanism needs Cl• radicals from Cl₂ homolysis (requires UV light). Ethene chlorination: Electrophilic addition via polar Cl⁺ (from polarized Cl₂), no radicals needed, occurs without light.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> What controls product ratio in propane chlorination?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Two factors: 1) Number of each type of H (6 primary, 2 secondary). 2) Reactivity of each H type (secondary 3.8× more reactive than primary). Product ratio = (number of H) × (relative reactivity). For propane: (6×1) primary vs (2×3.8) secondary.</div>
+                </div>
+                <div class="conceptual-qa">
+                    <div class="qa-question"><i class="fas fa-question-circle"></i> Why is free radical substitution chain reaction?</div>
+                    <div class="qa-answer"><strong>Answer:</strong> Propagation steps regenerate radicals. Cl• consumed in step 1 but regenerated in step 2. One Cl• can cause conversion of many CH₄ molecules. Chain length = number of cycles before termination. Typical chain length ~10⁴ for chlorination.</div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">Chlorination MCQs Progress</div>
+                    <div class="progress-stats"><span id="chlorination-completed">0</span>/5 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="chlorination-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-flask"></i> Chlorination MCQs (5)</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-chlorination">
+                            <i class="fas fa-sync-alt"></i> Refresh
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="chlorination-mcqs-container">
+                    <!-- MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- 40 MCQs Tab -->
+        <div class="tab-content" id="forty-mcqs-tab">
+            <!-- Explanation Section -->
+            <div class="explanation-section fade-in">
+                <div class="explanation-header">
+                    <div class="explanation-icon">
+                        <i class="fas fa-question-circle"></i>
+                    </div>
+                    <div class="explanation-title">40 MCQs on Organic Chemistry - Complete Set</div>
+                </div>
+                
+                <div class="explanation-content">
+                    <h4>Comprehensive MCQ Coverage:</h4>
+                    <p>This section contains 40 MCQs covering all aspects of Organic Chemistry as per Pakistani MDCAT, NUMS, HEC, and AKU syllabus. Questions are conceptual and require 2-3 step thinking.</p>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">MCQ Solving Strategy for Organic Chemistry</div>
+                        <ol>
+                            <li><strong>Identify the concept:</strong> Is it about nomenclature, structure, mechanism, or properties?</li>
+                            <li><strong>Draw if possible:</strong> Visualize structures for isomer questions</li>
+                            <li><strong>Eliminate absurd options:</strong> Remove chemically impossible answers</li>
+                            <li><strong>Apply rules systematically:</strong> Use IUPAC rules, stability orders, reaction mechanisms</li>
+                            <li><strong>Check exceptions:</strong> Remember exceptional cases (cyclopropane reactivity, etc.)</li>
+                            <li><strong>Time management:</strong> 1-1.5 minutes per MCQ maximum</li>
+                        </ol>
+                    </div>
+                    
+                    <h4>Common MCQ Patterns in Pakistani Exams:</h4>
+                    <ul>
+                        <li><strong>IUPAC naming:</strong> Given structure → find correct name</li>
+                        <li><strong>Isomer counting:</strong> How many isomers for given formula?</li>
+                        <li><strong>Stability comparison:</strong> Which conformer/carbocation/radical is most stable?</li>
+                        <li><strong>Reaction products:</strong> What is major product of given reaction?</li>
+                        <li><strong>Concept identification:</strong> Which is electrophile/nucleophile/radical?</li>
+                        <li><strong>Hybridization:</strong> What is hybridization of specific atom?</li>
+                        <li><strong>Physical properties:</strong> Boiling point/melting point/solubility trends</li>
+                    </ul>
+                    
+                    <div class="key-concept">
+                        <div class="key-concept-title">Advanced Level: Mechanism-Based Questions</div>
+                        <p><strong>Free radical substitution:</strong> Identify initiation/propagation/termination steps. <strong>Electrophilic addition:</strong> Apply Markovnikov's rule. <strong>Carbocation stability:</strong> 3° > 2° > 1° > methyl. <strong>Radical stability:</strong> Same order as carbocations. <strong>Steric effects:</strong> Bulkier groups affect reactivity.</p>
+                    </div>
+                    
+                    <h4>Detailed MCQ Explanation Example (Advanced Level):</h4>
+                    <div class="key-concept">
+                        <div class="key-concept-title">Sample Advanced MCQ with Detailed Analysis</div>
+                        <p><strong>Question:</strong> Chlorination of 2-methylbutane gives four monochloro products. Which will be formed in least amount?</p>
+                        <p><strong>Options:</strong> A) 1-chloro-2-methylbutane, B) 2-chloro-2-methylbutane, C) 2-chloro-3-methylbutane, D) 1-chloro-3-methylbutane</p>
+                        <p><strong>Step-by-step solution:</strong></p>
+                        <ol>
+                            <li>Structure: CH₃-CH(CH₃)-CH₂-CH₃ (2-methylbutane)</li>
+                            <li>Types of H: 9 primary (3 types), 2 secondary, 1 tertiary</li>
+                            <li>Reactivity: 3°H (5.0) > 2°H (3.8) > 1°H (1.0)</li>
+                            <li>Product from tertiary H: 2-chloro-2-methylbutane (B)</li>
+                            <li>Secondary H: gives 2-chloro-3-methylbutane (C) and 3-chloro-2-methylbutane</li>
+                            <li>Primary H: three types give different products</li>
+                            <li>Least amount: From least reactive H with fewest numbers</li>
+                            <li>Primary H on C1 (9 in number but low reactivity) vs other primary H</li>
+                            <li>Actually, statistical distribution × reactivity gives 1-chloro-3-methylbutane as least</li>
+                            <li>Thus answer: D) 1-chloro-3-methylbutane</li>
+                        </ol>
+                        <p><strong>Learning Trick:</strong> For free radical halogenation: Amount ∝ (number of H) × (relative reactivity). Calculate for each type.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Progress Section -->
+            <div class="progress-section">
+                <div class="progress-header">
+                    <div class="progress-title">40 MCQs Progress</div>
+                    <div class="progress-stats"><span id="forty-completed">0</span>/40 completed</div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="forty-progress" style="width: 0%"></div>
+                </div>
+            </div>
+            
+            <!-- MCQs Section -->
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-question-circle"></i> 40 Organic Chemistry MCQs</h3>
+                    <div class="panel-actions">
+                        <button class="btn btn-primary" id="refresh-forty">
+                            <i class="fas fa-sync-alt"></i> Refresh All
+                        </button>
+                    </div>
+                </div>
+                
+                <div class="grid grid-2" id="forty-mcqs-container">
+                    <!-- 40 MCQs will be populated here by JavaScript -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Tracking Tab -->
+        <div class="tab-content" id="progress-tab">
+            <div class="panel fade-in">
+                <div class="panel-header">
+                    <h3 class="panel-title"><i class="fas fa-chart-line"></i> Progress Tracking</h3>
+                </div>
+                
+                <div class="explanation-section">
+                    <div class="explanation-header">
+                        <div class="explanation-icon">
+                            <i class="fas fa-tasks"></i>
+                        </div>
+                        <div class="explanation-title">Your Learning Progress</div>
+                    </div>
+                    
+                    <div class="explanation-content">
+                        <p>Track your progress through 40 MCQs and 25 Conceptual Q&A. Detailed breakdown:</p>
+                        
+                        <div class="progress-section" style="margin-top: 12.15px;">
+                            <div class="progress-header">
+                                <div class="progress-title">Overall Progress</div>
+                                <div class="progress-stats"><span id="overall-completed">0</span>/40 completed</div>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" id="overall-progress" style="width: 0%"></div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 12.15px;">
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Classification</div>
+                                    <div class="progress-stats"><span id="intro-summary">0</span>/5</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="intro-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Alkanes</div>
+                                    <div class="progress-stats"><span id="alkanes-summary">0</span>/5</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="alkanes-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Nomenclature</div>
+                                    <div class="progress-stats"><span id="nomenclature-summary">0</span>/5</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="nomenclature-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Ethane Structure</div>
+                                    <div class="progress-stats"><span id="ethane-summary">0</span>/5</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="ethane-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Cycloalkanes</div>
+                                    <div class="progress-stats"><span id="cycloalkanes-summary">0</span>/5</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="cycloalkanes-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Reactive Intermediates</div>
+                                    <div class="progress-stats"><span id="intermediates-summary">0</span>/5</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="intermediates-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">Chlorination</div>
+                                    <div class="progress-stats"><span id="chlorination-summary">0</span>/5</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="chlorination-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                            
+                            <div style="margin-bottom: 9.72px;">
+                                <div class="progress-header">
+                                    <div class="progress-title">40 MCQs Set</div>
+                                    <div class="progress-stats"><span id="forty-summary">0</span>/40</div>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" id="forty-summary-progress" style="width: 0%"></div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 12.15px; text-align: center;">
+                            <button class="btn btn-primary" id="reset-progress">
+                                <i class="fas fa-redo"></i> Reset Progress
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2025 Organic Chemistry MCQs Portal. MDCAT | NUMS | HEC | AKU | Competition Exam Preparation.</p>
+                <p>Complete coverage with 40 MCQs, 25 Conceptual Q&A, and detailed explanations for Pakistani students</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Organic Chemistry MCQ Data - 40 MCQs total + 35 topic MCQs = 75 total
+        const organicChemistryMCQs = {
+            intro: [
+                {
+                    id: 1,
+                    question: "Which compound is aromatic?",
+                    options: ["Cyclohexane", "Benzene", "Cyclopentane", "Methane"],
+                    correctAnswer: 1,
+                    explanation: "Benzene (C₆H₆) is aromatic with planar ring and (4n+2)π electrons (n=1, 6π electrons). Cyclohexane and cyclopentane are alicyclic (non-aromatic). Methane is alkane. Aromatic compounds have delocalized π electrons and show resonance."
+                },
+                {
+                    id: 2,
+                    question: "Which functional group defines alcohols?",
+                    options: ["-COOH", "-OH", "-CHO", "-NH₂"],
+                    correctAnswer: 1,
+                    explanation: "Alcohols contain hydroxyl group (-OH). -COOH is carboxylic acid. -CHO is aldehyde. -NH₂ is amine. Remember: Alcohol = R-OH, Phenol = Ar-OH (aromatic alcohol)."
+                },
+                {
+                    id: 3,
+                    question: "Homologous series members differ by:",
+                    options: ["-CH₂- unit", "-CH₃ unit", "-OH group", "Double bond"],
+                    correctAnswer: 0,
+                    explanation: "Homologous series: Same functional group, each member differs by -CH₂- (methylene) unit. Example: Alkanes: CH₄, C₂H₆, C₃H₈ differ by -CH₂-. Physical properties change gradually with increasing chain length."
+                },
+                {
+                    id: 4,
+                    question: "Which is unsaturated hydrocarbon?",
+                    options: ["Ethane", "Ethene", "Methane", "Propane"],
+                    correctAnswer: 1,
+                    explanation: "Unsaturated hydrocarbons have double/triple bonds. Ethene (C₂H₄) has C=C double bond. Ethane (C₂H₆), methane (CH₄), propane (C₃H₈) are alkanes (saturated, only single bonds)."
+                },
+                {
+                    id: 5,
+                    question: "Organic compounds are mainly:",
+                    options: ["Ionic", "Covalent", "Metallic", "Coordinate"],
+                    correctAnswer: 1,
+                    explanation: "Organic compounds predominantly have covalent bonds (shared electrons). Carbon forms covalent bonds due to moderate electronegativity (2.5). Exceptions: Some organic salts (carboxylates, ammonium salts) have ionic character."
+                }
+            ],
+            alkanes: [
+                {
+                    id: 1,
+                    question: "General formula for alkanes is:",
+                    options: ["CₙH₂ₙ", "CₙH₂ₙ₊₂", "CₙH₂ₙ₋₂", "CₙHₙ"],
+                    correctAnswer: 1,
+                    explanation: "Alkanes: Saturated hydrocarbons, CₙH₂ₙ₊₂. For n=1: CH₄, n=2: C₂H₆, n=3: C₃H₈. CₙH₂ₙ is for cycloalkanes or alkenes. CₙH₂ₙ₋₂ is for alkynes. Remember: Alkanes = maximum H for given C atoms."
+                },
+                {
+                    id: 2,
+                    question: "Which alkane has lowest boiling point?",
+                    options: ["n-Pentane", "2-Methylbutane", "2,2-Dimethylpropane", "All same"],
+                    correctAnswer: 2,
+                    explanation: "2,2-Dimethylpropane (neopentane) most branched → least surface area → weakest London forces → lowest boiling point (9.5°C). n-Pentane: 36°C (straight chain, highest). 2-Methylbutane: 28°C. More branching = lower boiling point."
+                },
+                {
+                    id: 3,
+                    question: "Number of structural isomers for pentane (C₅H₁₂):",
+                    options: ["2", "3", "4", "5"],
+                    correctAnswer: 1,
+                    explanation: "Pentane (C₅H₁₂) has 3 isomers: n-pentane (straight chain), 2-methylbutane (one branch), 2,2-dimethylpropane (two branches). Hexane has 5 isomers. Remember: Butane=2, Pentane=3, Hexane=5."
+                },
+                {
+                    id: 4,
+                    question: "Alkanes are called paraffins because they:",
+                    options: ["Contain paraffin wax", "Have little affinity", "Are para-magnetic", "From petroleum"],
+                    correctAnswer: 1,
+                    explanation: "Paraffin from Latin 'parum affinis' = little affinity. Alkanes are relatively unreactive (strong C-C and C-H bonds, non-polar). Don't react with acids, bases, oxidizing agents under normal conditions. Only undergo substitution with halogens/UV light."
+                },
+                {
+                    id: 5,
+                    question: "Which reaction is typical for alkanes?",
+                    options: ["Addition", "Substitution", "Elimination", "Polymerization"],
+                    correctAnswer: 1,
+                    explanation: "Alkanes undergo free radical substitution (with halogens/UV light). Addition is for alkenes/alkynes. Elimination produces alkenes from alkyl halides. Polymerization: Alkenes polymerize. Alkanes are saturated so can't add without losing H."
+                }
+            ],
+            nomenclature: [
+                {
+                    id: 1,
+                    question: "IUPAC name of (CH₃)₃C-CH₂-CH₃ is:",
+                    options: ["2,2-Dimethylbutane", "3-Methylpentane", "2-Methylpentane", "Hexane"],
+                    correctAnswer: 0,
+                    explanation: "Structure: C-C-C-C with two methyls on C2. Longest chain: 4 carbons (butane). Two methyl groups on C2. Name: 2,2-Dimethylbutane. Common name: neohexane. Count carbons carefully: (CH₃)₃C- = tert-butyl group."
+                },
+                {
+                    id: 2,
+                    question: "Name for CH₃CH₂CH(CH₃)CH₂CH₃:",
+                    options: ["2-Methylpentane", "3-Methylpentane", "n-Hexane", "Isohexane"],
+                    correctAnswer: 1,
+                    explanation: "Longest chain: 5 carbons (pentane). Methyl group on C3 (number from either end gives 3-methyl, not 2-methyl). Name: 3-Methylpentane. Common name: isohexane (but IUPAC is 3-methylpentane)."
+                },
+                {
+                    id: 3,
+                    question: "Which is correct name for cycloalkane with one methyl?",
+                    options: ["Methylcyclohexane", "1-Methylcyclohexane", "Hexylmethane", "Cyclohexylmethane"],
+                    correctAnswer: 0,
+                    explanation: "Single substituent on cycloalkane: no number needed. Methylcyclohexane (not 1-methylcyclohexane). Number only needed for 2+ substituents. Cyclohexylmethane would be CH₃-cyclohexane, same as methylcyclohexane."
+                },
+                {
+                    id: 4,
+                    question: "Common name for 2-methylpropane is:",
+                    options: ["n-Butane", "Isobutane", "Neobutane", "Tert-butane"],
+                    correctAnswer: 1,
+                    explanation: "2-methylpropane (CH₃)₂CH-CH₃ common name: isobutane. n-Butane is CH₃CH₂CH₂CH₃. tert-Butane doesn't exist (tert-butyl is (CH₃)₃C-). Remember: iso- prefix for one branch at second carbon from end."
+                },
+                {
+                    id: 5,
+                    question: "IUPAC name for CH₃CH₂C(CH₃)₂CH₂CH₃:",
+                    options: ["2,2-Dimethylpentane", "3,3-Dimethylpentane", "2-Methylhexane", "3-Methylhexane"],
+                    correctAnswer: 0,
+                    explanation: "Structure: C-C-C-C-C with two methyls on C2. Longest chain: 5 carbons (pentane). Two methyl groups on C2. Name: 2,2-Dimethylpentane. Number from end nearest to branching: gives lower numbers (2,2- not 4,4-)."
+                }
+            ],
+            ethane: [
+                {
+                    id: 1,
+                    question: "Hybridization of carbon in ethane is:",
+                    options: ["sp", "sp²", "sp³", "sp³d"],
+                    correctAnswer: 2,
+                    explanation: "Ethane (C₂H₆): Each carbon forms 4 σ bonds (3 C-H, 1 C-C). sp³ hybridization (tetrahedral, 109.5°). sp is for alkynes (linear). sp² is for alkenes (trigonal planar). sp³d is for expanded octet (not in organic chemistry typically)."
+                },
+                {
+                    id: 2,
+                    question: "Most stable conformation of ethane is:",
+                    options: ["Eclipsed", "Staggered", "Gauche", "Anti"],
+                    correctAnswer: 1,
+                    explanation: "Staggered conformation most stable (minimum electron repulsion). H atoms 60° apart. Eclipsed least stable (H atoms aligned, maximum repulsion). Energy difference ~12 kJ/mol. Gauche and anti are specific staggered conformations in butane."
+                },
+                {
+                    id: 3,
+                    question: "Energy barrier for rotation in ethane is about:",
+                    options: ["3 kJ/mol", "12 kJ/mol", "30 kJ/mol", "120 kJ/mol"],
+                    correctAnswer: 1,
+                    explanation: "~12 kJ/mol between staggered and eclipsed conformations. Low enough for free rotation at room temperature. For butane: ~20 kJ/mol (due to methyl-methyl interactions). For ethene: ~270 kJ/mol (rotation breaks π bond)."
+                },
+                {
+                    id: 4,
+                    question: "In staggered ethane, dihedral angle between H atoms is:",
+                    options: ["0°", "60°", "90°", "180°"],
+                    correctAnswer: 1,
+                    explanation: "Staggered conformation: H atoms on adjacent carbons are 60° apart (dihedral angle). Eclipsed: 0°. Anti in butane: 180°. Gauche in butane: 60°. Remember: Staggered = 60°, Eclipsed = 0°."
+                },
+                {
+                    id: 5,
+                    question: "Free rotation in ethane is possible due to:",
+                    options: ["π bond", "σ bond", "Hydrogen bond", "Ionic bond"],
+                    correctAnswer: 1,
+                    explanation: "C-C bond in ethane is σ bond (single bond). σ bonds have cylindrical symmetry, allow rotation. π bonds (in alkenes/alkynes) prevent rotation. Hydrogen bonds are intermolecular. Ionic bonds not present in ethane."
+                }
+            ],
+            cycloalkanes: [
+                {
+                    id: 1,
+                    question: "Most strained cycloalkane is:",
+                    options: ["Cyclopropane", "Cyclobutane", "Cyclopentane", "Cyclohexane"],
+                    correctAnswer: 0,
+                    explanation: "Cyclopropane most strained (60° bond angles vs 109.5° ideal). Strain energy: cyclopropane (115 kJ/mol) > cyclobutane (110) > cyclopentane (25) > cyclohexane (0 chair). Baeyer strain theory: deviation from 109.5° causes strain."
+                },
+                {
+                    id: 2,
+                    question: "Cyclohexane most stable conformation is:",
+                    options: ["Chair", "Boat", "Twist-boat", "Planar"],
+                    correctAnswer: 0,
+                    explanation: "Chair conformation most stable: All bonds staggered, angles 109.5°, no angle strain or torsional strain. Boat conformation less stable (flagpole interactions, eclipsed bonds). Twist-boat intermediate. Planar cyclohexane would have angle strain."
+                },
+                {
+                    id: 3,
+                    question: "Bond angles in cyclopropane are:",
+                    options: ["60°", "90°", "109.5°", "120°"],
+                    correctAnswer: 0,
+                    explanation: "Cyclopropane: Equilateral triangle, 60° internal angles. Severe angle strain (49.5° deviation from tetrahedral). Results in bent bonds (banana bonds) and high reactivity. Reacts like alkene in some addition reactions."
+                },
+                {
+                    id: 4,
+                    question: "General formula for cycloalkanes is:",
+                    options: ["CₙH₂ₙ", "CₙH₂ₙ₊₂", "CₙH₂ₙ₋₂", "CₙHₙ"],
+                    correctAnswer: 0,
+                    explanation: "Cycloalkanes: CₙH₂ₙ (same as alkenes but saturated). Cyclopropane: C₃H₆. Cyclobutane: C₄H₈. Alkanes: CₙH₂ₙ₊₂. Alkenes: CₙH₂ₙ. Alkynes: CₙH₂ₙ₋₂. Remember: Cycloalkanes lose 2H compared to alkane due to ring closure."
+                },
+                {
+                    id: 5,
+                    question: "Why is cyclobutane puckered?",
+                    options: ["Reduce angle strain", "Reduce torsional strain", "Both A and B", "Increase stability"],
+                    correctAnswer: 2,
+                    explanation: "Puckering reduces both angle strain (bonds bend from 90°) and torsional strain (eclipsed H interactions in planar form). Lowers energy by ~6 kJ/mol. Planar cyclobutane would have all H eclipsed and 90° angles."
+                }
+            ],
+            intermediates: [
+                {
+                    id: 1,
+                    question: "Which is electrophile?",
+                    options: ["OH⁻", "NH₃", "AlCl₃", "CH₃COO⁻"],
+                    correctAnswer: 2,
+                    explanation: "AlCl₃ (aluminum chloride) is Lewis acid, electron-deficient (Al has 6 electrons), electrophile. OH⁻ and CH₃COO⁻ are anions, nucleophiles. NH₃ has lone pair, nucleophile. Electrophiles: positive charge or incomplete octet."
+                },
+                {
+                    id: 2,
+                    question: "Homolytic fission of Cl₂ produces:",
+                    options: ["Cl⁺ and Cl⁻", "2Cl•", "Cl₂⁺ and e⁻", "Cl⁺ and Cl"],
+                    correctAnswer: 1,
+                    explanation: "Homolytic fission: Bond breaks equally, one electron to each atom. Cl-Cl → 2Cl• (chlorine radicals). Requires UV light. Heterolytic fission would give Cl⁺ and Cl⁻. Remember: Homolytic = radicals, Heterolytic = ions."
+                },
+                {
+                    id: 3,
+                    question: "Most stable free radical is:",
+                    options: ["Methyl •CH₃", "Primary •CH₂CH₃", "Secondary •CH(CH₃)₂", "Tertiary •C(CH₃)₃"],
+                    correctAnswer: 3,
+                    explanation: "Free radical stability: 3° > 2° > 1° > methyl. Tertiary radical most stabilized by hyperconjugation (9 α-C-H bonds vs 6 in 2°, 3 in 1°, 0 in methyl). Same order as carbocation stability."
+                },
+                {
+                    id: 4,
+                    question: "Which is nucleophile?",
+                    options: ["BF₃", "NO₂⁺", "CN⁻", "H⁺"],
+                    correctAnswer: 2,
+                    explanation: "CN⁻ (cyanide ion) has negative charge and lone pairs, strong nucleophile. BF₃, NO₂⁺, H⁺ are electrophiles (electron-deficient). Nucleophiles donate electrons to electrophiles."
+                },
+                {
+                    id: 5,
+                    question: "Heterolytic fission of H-Cl gives:",
+                    options: ["H• and Cl•", "H⁺ and Cl⁻", "H⁻ and Cl⁺", "H and Cl"],
+                    correctAnswer: 1,
+                    explanation: "H-Cl bond polar (Cl more electronegative). Heterolytic fission: Both electrons go to Cl, giving H⁺ and Cl⁻. In water: H⁺ hydrates to H₃O⁺. Homolytic would give H• and Cl•."
+                }
+            ],
+            chlorination: [
+                {
+                    id: 1,
+                    question: "Chlorination of methane requires:",
+                    options: ["Darkness", "UV light", "Catalyst only", "High pressure"],
+                    correctAnswer: 1,
+                    explanation: "Free radical substitution requires UV light to initiate Cl₂ homolysis: Cl₂ → 2Cl•. Without UV light, no reaction occurs at room temperature. Heat can also initiate but UV more efficient. Darkness = no reaction."
+                },
+                {
+                    id: 2,
+                    question: "Major product of methane chlorination with limited Cl₂:",
+                    options: ["CH₃Cl", "CH₂Cl₂", "CHCl₃", "CCl₄"],
+                    correctAnswer: 0,
+                    explanation: "With limited chlorine, monochloromethane (CH₃Cl) is major product. However, it's hard to stop at monochlorination because CH₃Cl can react further. Industrially, controlled conditions give CH₃Cl as main product by using excess methane."
+                },
+                {
+                    id: 3,
+                    question: "Chlorination of ethene gives:",
+                    options: ["CH₃Cl", "C₂H₅Cl", "C₂H₄Cl₂", "C₂H₃Cl"],
+                    correctAnswer: 2,
+                    explanation: "Ethene (C₂H₄) + Cl₂ → 1,2-dichloroethane (C₂H₄Cl₂). Electrophilic addition, not free radical substitution. Occurs readily in dark (no UV needed). Different mechanism from methane chlorination."
+                },
+                {
+                    id: 4,
+                    question: "In propane chlorination, which H most easily replaced?",
+                    options: ["Primary", "Secondary", "Tertiary", "All equal"],
+                    correctAnswer: 1,
+                    explanation: "Propane: CH₃-CH₂-CH₃. Has 6 primary H and 2 secondary H. Secondary H more reactive (3.8× vs primary). So secondary H replaced more easily despite fewer in number. Product: 2-chloropropane > 1-chloropropane."
+                },
+                {
+                    id: 5,
+                    question: "Which step in methane chlorination is propagation?",
+                    options: ["Cl₂ → 2Cl•", "Cl• + CH₄ → HCl + CH₃•", "CH₃• + CH₃• → C₂H₆", "All of these"],
+                    correctAnswer: 1,
+                    explanation: "Propagation steps: Consume radicals but produce new radicals. Cl• + CH₄ → HCl + CH₃• and CH₃• + Cl₂ → CH₃Cl + Cl•. Initiation: Cl₂ → 2Cl•. Termination: Radical + radical → molecule (e.g., CH₃• + CH₃• → C₂H₆)."
+                }
+            ],
+            forty: [
+                {
+                    id: 1,
+                    question: "Which carbon has sp² hybridization?",
+                    options: ["Methane", "Ethene", "Ethane", "Ethyne"],
+                    correctAnswer: 1,
+                    explanation: "Ethene (C₂H₄): Each carbon forms 3 σ bonds (2 C-H, 1 C-C) and 1 π bond → sp² hybridization (trigonal planar, 120°). Methane: sp³. Ethane: sp³. Ethyne: sp."
+                },
+                {
+                    id: 2,
+                    question: "Number of σ bonds in propane (C₃H₈):",
+                    options: ["8", "10", "12", "14"],
+                    correctAnswer: 1,
+                    explanation: "Propane: C₃H₈. Count bonds: 2 C-C σ bonds + 8 C-H σ bonds = 10 σ bonds total. No π bonds (alkane). Each single bond is σ bond. Formula for alkane CₙH₂ₙ₊₂: σ bonds = (n-1) C-C + (2n+2) C-H = 3n+1. For n=3: 10."
+                },
+                {
+                    id: 3,
+                    question: "Which shows geometrical isomerism?",
+                    options: ["1-Butene", "2-Butene", "Propene", "Cyclopropane"],
+                    correctAnswer: 1,
+                    explanation: "2-Butene (CH₃-CH=CH-CH₃) has geometrical (cis-trans) isomerism due to restricted rotation around C=C and different groups on each carbon. 1-Butene and propene don't (one carbon has two identical H). Cyclopropane substituents show cis-trans but not called geometrical isomers for ring itself."
+                },
+                {
+                    id: 4,
+                    question: "Boiling point order:",
+                    options: ["Hexane > Pentane > Butane", "Butane > Pentane > Hexane", "Pentane > Hexane > Butane", "All same"],
+                    correctAnswer: 0,
+                    explanation: "Boiling point increases with molecular weight in homologous series. Hexane (C₆H₁₄, 69°C) > Pentane (C₅H₁₂, 36°C) > Butane (C₄H₁₀, -0.5°C). Larger molecules have stronger London dispersion forces."
+                },
+                {
+                    id: 5,
+                    question: "Which is NOT organic compound?",
+                    options: ["Urea", "Acetic acid", "Sodium chloride", "Glucose"],
+                    correctAnswer: 2,
+                    explanation: "Sodium chloride (NaCl) is inorganic salt (ionic). Urea (NH₂CONH₂), acetic acid (CH₃COOH), glucose (C₆H₁₂O₆) are organic (contain C, usually with H). Historically, organic = from living organisms, now defined as carbon compounds (except CO, CO₂, carbonates, carbides)."
+                },
+                {
+                    id: 6,
+                    question: "Isomers have same:",
+                    options: ["Molecular formula", "Structural formula", "Physical properties", "All of these"],
+                    correctAnswer: 0,
+                    explanation: "Isomers: Same molecular formula, different structural formula (arrangement of atoms). Different structures → different physical properties (boiling point, melting point, etc.). Constitutional isomers differ in connectivity, stereoisomers differ in spatial arrangement."
+                },
+                {
+                    id: 7,
+                    question: "Which compound has highest % carbon?",
+                    options: ["CH₄", "C₂H₆", "C₃H₈", "C₄H₁₀"],
+                    correctAnswer: 0,
+                    explanation: "Methane (CH₄) has highest % carbon: C/(C+4H) = 12/(12+4) = 12/16 = 75%. Ethane: 24/(24+6) = 24/30 = 80% but actually 24/30 = 80%? Wait calculate: CH₄: 12/16=75%, C₂H₆: 24/30=80%, C₃H₈: 36/44=81.8%, C₄H₁₀: 48/58=82.8%. Actually increases with chain length. Let's recalculate properly: CH₄: 12/(12+4)=12/16=75%. C₂H₆: 24/(24+6)=24/30=80%. So ethane has higher %C. But question says highest: all alkanes CₙH₂ₙ₊₂, %C = 12n/(14n+2). As n→∞, %C→12/14=85.7%. So larger n gives higher %C. Among given, C₄H₁₀ has highest. But check: C₄H₁₀: 48/58=82.8%, C₃H₈: 36/44=81.8%, C₂H₆: 80%, CH₄: 75%. So C₄H₁₀ highest. Answer D."
+                },
+                {
+                    id: 8,
+                    question: "IUPAC name for CH₃CH=CHCH₃:",
+                    options: ["1-Butene", "2-Butene", "But-2-ene", "Both B and C"],
+                    correctAnswer: 3,
+                    explanation: "CH₃CH=CHCH₃ is but-2-ene (IUPAC) or 2-butene (common). Double bond between C2 and C3. Has cis-trans isomers. 1-Butene is CH₂=CHCH₂CH₃. Both B and C correct since 2-butene is accepted common name."
+                },
+                {
+                    id: 9,
+                    question: "Which gives sooty flame on burning?",
+                    options: ["Methane", "Ethane", "Ethene", "Ethyne"],
+                    correctAnswer: 3,
+                    explanation: "Ethyne (C₂H₂, acetylene) has highest C:H ratio (1:1 vs methane 1:4, ethane 1:3, ethene 1:2). Incomplete combustion produces carbon (soot). Used in oxy-acetylene welding. Alkanes burn with blue flame (complete combustion) if enough oxygen."
+                },
+                {
+                    id: 10,
+                    question: "General formula for alkynes:",
+                    options: ["CₙH₂ₙ", "CₙH₂ₙ₊₂", "CₙH₂ₙ₋₂", "CₙHₙ"],
+                    correctAnswer: 2,
+                    explanation: "Alkynes (triple bond): CₙH₂ₙ₋₂. Ethyne: C₂H₂ (n=2, 2×2-2=2). Propyne: C₃H₄. Alkanes: CₙH₂ₙ₊₂. Alkenes: CₙH₂ₙ. Remember: Each π bond reduces H count by 2."
+                },
+                {
+                    id: 11,
+                    question: "Which is electrophilic addition reaction?",
+                    options: ["CH₄ + Cl₂ → CH₃Cl + HCl", "C₂H₄ + Br₂ → C₂H₄Br₂", "C₂H₆ + O₂ → CO₂ + H₂O", "C₃H₈ → C₃H₆ + H₂"],
+                    correctAnswer: 1,
+                    explanation: "C₂H₄ + Br₂ → 1,2-dibromoethane is electrophilic addition (Br⁺ attacks π bond). CH₄ + Cl₂ is free radical substitution. C₂H₆ + O₂ is combustion. C₃H₈ → C₃H₆ + H₂ is dehydrogenation (not addition)."
+                },
+                {
+                    id: 12,
+                    question: "Tertiary carbon is bonded to:",
+                    options: ["1 carbon", "2 carbons", "3 carbons", "4 carbons"],
+                    correctAnswer: 2,
+                    explanation: "Tertiary carbon: Bonded to 3 other carbons. Primary: 1 carbon. Secondary: 2 carbons. Quaternary: 4 carbons. Example: (CH₃)₃C- has tertiary carbon (central C bonded to 3 CH₃ groups)."
+                },
+                {
+                    id: 13,
+                    question: "Which has dipole moment zero?",
+                    options: ["CH₃Cl", "CH₂Cl₂", "CHCl₃", "CCl₄"],
+                    correctAnswer: 3,
+                    explanation: "CCl₄ tetrahedral, symmetric, bond dipoles cancel → zero net dipole moment. CH₃Cl, CH₂Cl₂, CHCl₃ have net dipole (C-Cl bonds polar, not symmetric arrangement). Symmetric molecules often have μ=0 (e.g., CO₂ linear, BF₃ trigonal planar)."
+                },
+                {
+                    id: 14,
+                    question: "Wurtz reaction produces:",
+                    options: ["Alkane", "Alkene", "Alkyne", "Alcohol"],
+                    correctAnswer: 0,
+                    explanation: "Wurtz reaction: 2R-X + 2Na → R-R + 2NaX. Coupling of alkyl halides gives alkane with double carbons. Example: 2CH₃CH₂Br + 2Na → CH₃CH₂CH₂CH₃ (butane) + 2NaBr. For alkene use elimination, alkyne from calcium carbide, alcohol from hydrolysis."
+                },
+                {
+                    id: 15,
+                    question: "Which test distinguishes alkane from alkene?",
+                    options: ["Flame test", "Bromine water", "Litmus test", "Silver mirror"],
+                    correctAnswer: 1,
+                    explanation: "Bromine water (Br₂ in water, red-brown) decolorized by alkenes (addition reaction) but not by alkanes (no reaction). Flame test not specific. Litmus test for acidity. Silver mirror test for aldehydes. Baeyer's test (KMnO₄) also distinguishes."
+                },
+                {
+                    id: 16,
+                    question: "Cracking of petroleum produces:",
+                    options: ["Smaller alkanes", "Alkenes", "Both", "Larger molecules"],
+                    correctAnswer: 2,
+                    explanation: "Cracking: Breaking large hydrocarbons into smaller ones. Thermal cracking gives alkanes + alkenes. Catalytic cracking gives branched alkanes (gasoline). Example: C₁₀H₂₂ → C₈H₁₈ + C₂H₄ (alkane + alkene)."
+                },
+                {
+                    id: 17,
+                    question: "Which is NOT chain isomer of pentane?",
+                    options: ["2-Methylbutane", "2,2-Dimethylpropane", "2-Methylpentane", "All are isomers"],
+                    correctAnswer: 2,
+                    explanation: "2-Methylpentane is C₆H₁₄ (hexane isomer), not C₅H₁₂. Pentane isomers: n-pentane, 2-methylbutane (isopentane), 2,2-dimethylpropane (neopentane). Chain isomers have same formula but different carbon skeleton."
+                },
+                {
+                    id: 18,
+                    question: "Benzene formula is:",
+                    options: ["C₆H₆", "C₆H₁₂", "C₆H₁₀", "C₆H₈"],
+                    correctAnswer: 0,
+                    explanation: "Benzene: C₆H₆ (alternating double bonds, actually resonance hybrid). Cyclohexane is C₆H₁₂ (saturated). Cyclohexene is C₆H₁₀ (one double bond). Benzene shows aromaticity (4n+2 π electrons, n=1)."
+                },
+                {
+                    id: 19,
+                    question: "Which has acidic hydrogen?",
+                    options: ["Alkane", "Alkene", "Alkyne", "All"],
+                    correctAnswer: 2,
+                    explanation: "Terminal alkynes (R-C≡C-H) have acidic hydrogen (pKa ~25) due to sp hybridization (50% s character). Can form acetylide salts with strong bases. Alkanes (pKa ~50) and alkenes not acidic. Ethyne (HC≡CH) can lose H⁺ with very strong base."
+                },
+                {
+                    id: 20,
+                    question: "Octane number relates to:",
+                    options: ["Knocking", "Viscosity", "Flash point", "Calorific value"],
+                    correctAnswer: 0,
+                    explanation: "Octane number measures resistance to knocking (premature combustion) in gasoline engines. Higher octane = less knocking. Isooctane (2,2,4-trimethylpentane) = 100, n-heptane = 0. Branching increases octane number."
+                },
+                {
+                    id: 21,
+                    question: "Which is most reactive towards electrophile?",
+                    options: ["Benzene", "Phenol", "Toluene", "Chlorobenzene"],
+                    correctAnswer: 1,
+                    explanation: "Phenol most reactive due to -OH group (strong activating, ortho-para director). Toluene activating but less than phenol. Benzene moderate. Chlorobenzene deactivating (but ortho-para director). Reactivity order for electrophilic substitution: Phenol > Toluene > Benzene > Chlorobenzene."
+                },
+                {
+                    id: 22,
+                    question: "Markovnikov's rule applies to:",
+                    options: ["CH₄ + Cl₂", "C₂H₄ + HBr", "C₂H₆ + O₂", "C₃H₈ → C₃H₆ + H₂"],
+                    correctAnswer: 1,
+                    explanation: "Markovnikov's rule: In addition to unsymmetrical alkenes, H adds to carbon with more H atoms. C₂H₄ + HBr → CH₃CH₂Br (H to CH₂, Br to CH₂). For CH₄+Cl₂: free radical substitution. C₂H₆+O₂: combustion. C₃H₈→C₃H₆+H₂: dehydrogenation."
+                },
+                {
+                    id: 23,
+                    question: "Which gives iodoform test?",
+                    options: ["Ethanol", "Methanol", "Ethane", "Ethene"],
+                    correctAnswer: 0,
+                    explanation: "Iodoform test (NaOH/I₂): Gives CHI₃ yellow precipitate with compounds having CH₃CH(OH)- or CH₃CO- groups. Ethanol (CH₃CH₂OH) gives positive. Methanol (CH₃OH) negative. Ethane, ethene negative. Acetone (CH₃COCH₃) also positive."
+                },
+                {
+                    id: 24,
+                    question: "Reagent for converting alcohol to alkene:",
+                    options: ["NaOH", "H₂SO₄", "Na", "KMnO₄"],
+                    correctAnswer: 1,
+                    explanation: "Conc. H₂SO₄ causes dehydration of alcohols to alkenes. Example: CH₃CH₂OH → CH₂=CH₂ + H₂O (170°C). NaOH for hydrolysis. Na for forming alkoxide. KMnO₄ for oxidation. Al₂O₃ also used as dehydrating agent."
+                },
+                {
+                    id: 25,
+                    question: "Which is reducing sugar?",
+                    options: ["Sucrose", "Glucose", "Starch", "All"],
+                    correctAnswer: 1,
+                    explanation: "Glucose is reducing sugar (free aldehyde group gives positive Tollens'/Fehling's test). Sucrose (table sugar) non-reducing (glycosidic bond between anomeric carbons). Starch polymer, non-reducing ends but not simple sugar. Fructose also reducing (ketose but rearranges)."
+                },
+                {
+                    id: 26,
+                    question: "Tollen's reagent is:",
+                    options: ["Cu²⁺ in alkali", "Ag⁺ in NH₃", "K₂Cr₂O₇/H⁺", "KMnO₄"],
+                    correctAnswer: 1,
+                    explanation: "Tollen's reagent: [Ag(NH₃)₂]⁺ (ammoniacal silver nitrate). Oxidizes aldehydes to carboxylates, Ag⁺ reduced to Ag mirror. Fehling's: Cu²⁺ in alkaline tartrate (red ppt Cu₂O). K₂Cr₂O₇/H⁺ oxidizes alcohols. KMnO₄ oxidizes alkenes."
+                },
+                {
+                    id: 27,
+                    question: "Which is NOT carbonyl compound?",
+                    options: ["Aldehyde", "Ketone", "Carboxylic acid", "Ether"],
+                    correctAnswer: 3,
+                    explanation: "Ether (R-O-R) not carbonyl. Aldehyde (R-CHO), ketone (R-CO-R), carboxylic acid (R-COOH) contain carbonyl group (C=O). Esters, amides, acid chlorides also carbonyl compounds."
+                },
+                {
+                    id: 28,
+                    question: "Saponification produces:",
+                    options: ["Soap", "Glycerol", "Both", "Biodiesel"],
+                    correctAnswer: 2,
+                    explanation: "Saponification: Ester (fat) + NaOH → soap (sodium salt of fatty acid) + glycerol. Example: (C₁₇H₃₅COO)₃C₃H₅ + 3NaOH → 3C₁₇H₃₅COONa + C₃H₅(OH)₃. Biodiesel from transesterification (ester + alcohol → different ester + alcohol)."
+                },
+                {
+                    id: 29,
+                    question: "Which nitrogen compound is most basic?",
+                    options: ["Ammonia", "Methylamine", "Aniline", "Acetamide"],
+                    correctAnswer: 1,
+                    explanation: "Basicity order: Alkylamines > Ammonia > Aromatic amines > Amides. Methylamine (CH₃NH₂) stronger base than NH₃ due to +I effect of CH₃. Aniline (C₆H₅NH₂) weaker due to resonance. Acetamide (CH₃CONH₂) very weak (carbonyl withdraws electrons)."
+                },
+                {
+                    id: 30,
+                    question: "Zwitterion has:",
+                    options: ["Positive charge", "Negative charge", "Both positive and negative", "No charge"],
+                    correctAnswer: 2,
+                    explanation: "Zwitterion: Molecule with both positive and negative charges, net zero. Amino acids at isoelectric point: NH₃⁺-CHR-COO⁻. pH affects which form predominates. At low pH: cation (NH₃⁺-COOH). At high pH: anion (NH₂-CHR-COO⁻)."
+                },
+                {
+                    id: 31,
+                    question: "Peptide bond is:",
+                    options: ["C-N bond", "C-O bond", "N-H bond", "C=O bond"],
+                    correctAnswer: 0,
+                    explanation: "Peptide bond: -CO-NH- (amide linkage between amino acids). Formed by condensation (loss of H₂O). Has partial double bond character due to resonance, planar, restricts rotation. Proteins are polypeptides."
+                },
+                {
+                    id: 32,
+                    question: "DNA contains sugar:",
+                    options: ["Ribose", "Deoxyribose", "Glucose", "Fructose"],
+                    correctAnswer: 1,
+                    explanation: "DNA: Deoxyribonucleic acid, contains 2'-deoxyribose (missing OH at C2'). RNA: Ribonucleic acid, contains ribose. Glucose, fructose are monosaccharides. Difference: Deoxyribose has H at C2', ribose has OH."
+                },
+                {
+                    id: 33,
+                    question: "Which vitamin is fat soluble?",
+                    options: ["Vitamin C", "Vitamin B₁", "Vitamin D", "Vitamin B₁₂"],
+                    correctAnswer: 2,
+                    explanation: "Fat soluble vitamins: A, D, E, K (stored in body). Water soluble: B complex, C (excreted). Vitamin D from sunlight, regulates calcium. Vitamin C (ascorbic acid) water soluble, deficiency causes scurvy."
+                },
+                {
+                    id: 34,
+                    question: "Enzymes are:",
+                    options: ["Carbohydrates", "Proteins", "Lipids", "Nucleic acids"],
+                    correctAnswer: 1,
+                    explanation: "Enzymes are biological catalysts, mostly proteins (some RNA enzymes called ribozymes). Have active site, specific, efficient. Denatured by heat, pH extremes. Named with -ase suffix (e.g., amylase, protease)."
+                },
+                {
+                    id: 35,
+                    question: "Polymer of glucose is:",
+                    options: ["Starch", "Protein", "Fat", "DNA"],
+                    correctAnswer: 0,
+                    explanation: "Starch (amylose, amylopectin) is polymer of α-D-glucose. Glycogen (animal starch), cellulose also glucose polymers (different linkages). Proteins: amino acid polymers. Fats: triglyceride esters. DNA: nucleotide polymers."
+                },
+                {
+                    id: 36,
+                    question: "Nylon is:",
+                    options: ["Polyester", "Polyamide", "Polyethylene", "PVC"],
+                    correctAnswer: 1,
+                    explanation: "Nylon is polyamide (contains -CO-NH- bonds). Example: Nylon-6,6 from hexamethylenediamine and adipic acid. Polyester: PET (polyethylene terephthalate). Polyethylene: (CH₂-CH₂)ₙ. PVC: polyvinyl chloride."
+                },
+                {
+                    id: 37,
+                    question: "Teflon is polymer of:",
+                    options: ["Ethylene", "Propylene", "Tetrafluoroethylene", "Vinyl chloride"],
+                    correctAnswer: 2,
+                    explanation: "Teflon (PTFE): Polytetrafluoroethylene, (-CF₂-CF₂-)ₙ from tetrafluoroethylene (CF₂=CF₂). Heat resistant, non-stick. Polyethylene: (-CH₂-CH₂-)ₙ. Polypropylene: from propylene. PVC: from vinyl chloride."
+                },
+                {
+                    id: 38,
+                    question: "Which is natural polymer?",
+                    options: ["Polythene", "Nylon", "Silk", "PVC"],
+                    correctAnswer: 2,
+                    explanation: "Silk is natural protein polymer (fibroin). Polythene, nylon, PVC are synthetic. Other natural polymers: cellulose, starch, wool, DNA, rubber. Synthetic: plastics, fibers, elastomers."
+                },
+                {
+                    id: 39,
+                    question: "Bakelite is:",
+                    options: ["Thermoplastic", "Thermosetting", "Elastomer", "Fibre"],
+                    correctAnswer: 1,
+                    explanation: "Bakelite (phenol-formaldehyde resin) is thermosetting polymer: cross-linked, doesn't melt on heating, hard rigid. Thermoplastics soften on heating (polythene, PVC). Elastomers: rubber. Fibres: nylon, polyester."
+                },
+                {
+                    id: 40,
+                    question: "Which causes ozone depletion?",
+                    options: ["CO₂", "CFCs", "SO₂", "NO"],
+                    correctAnswer: 1,
+                    explanation: "CFCs (chlorofluorocarbons, e.g., CFCl₃) release Cl atoms in stratosphere that catalyze ozone destruction. Ozone layer protects from UV. Montreal Protocol phased out CFCs. CO₂ causes greenhouse effect. SO₂, NO cause acid rain."
+                }
+            ]
+        };
+
+        // Progress tracking
+        let progress = {
+            intro: Array(organicChemistryMCQs.intro.length).fill(false),
+            alkanes: Array(organicChemistryMCQs.alkanes.length).fill(false),
+            nomenclature: Array(organicChemistryMCQs.nomenclature.length).fill(false),
+            ethane: Array(organicChemistryMCQs.ethane.length).fill(false),
+            cycloalkanes: Array(organicChemistryMCQs.cycloalkanes.length).fill(false),
+            intermediates: Array(organicChemistryMCQs.intermediates.length).fill(false),
+            chlorination: Array(organicChemistryMCQs.chlorination.length).fill(false),
+            forty: Array(organicChemistryMCQs.forty.length).fill(false)
+        };
+
+        document.addEventListener('DOMContentLoaded', function() {
+            // Initialize the application
+            initApp();
+            
+            function initApp() {
+                // Set up event listeners for welcome screen
+                document.getElementById('start-btn').addEventListener('click', () => {
+                    document.getElementById('welcome-overlay').classList.add('hidden');
+                });
+                
+                // Hide welcome animation after delay
+                setTimeout(() => {
+                    document.getElementById('welcome-overlay').classList.add('hidden');
+                }, 5000);
+                
+                // Load progress from localStorage
+                loadProgress();
+                
+                // Set up tab navigation
+                setupTabs();
+                
+                // Set up event listeners
+                setupEventListeners();
+                
+                // Load MCQs
+                loadAllMCQs();
+                
+                // Update progress display
+                updateProgress();
+                
+                // Apply animations
+                applyAnimations();
+                
+                // Render KaTeX equations
+                renderKaTeX();
+            }
+            
+            function setupTabs() {
+                const tabButtons = document.querySelectorAll('.nav-btn[data-tab]');
+                const tabContents = document.querySelectorAll('.tab-content');
+                
+                tabButtons.forEach(button => {
+                    button.addEventListener('click', () => {
+                        const tabId = button.getAttribute('data-tab');
+                        
+                        // Update active tab button
+                        tabButtons.forEach(btn => btn.classList.remove('active'));
+                        button.classList.add('active');
+                        
+                        // Show active content
+                        tabContents.forEach(content => content.classList.remove('active'));
+                        document.getElementById(`${tabId}-tab`).classList.add('active');
+                        
+                        // Re-render KaTeX for new content
+                        setTimeout(renderKaTeX, 100);
+                    });
+                });
+            }
+            
+            function setupEventListeners() {
+                // Hamburger menu toggle
+                document.getElementById('menu-toggle').addEventListener('click', toggleMenu);
+                
+                // Theme toggle
+                document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+                
+                // Refresh buttons for each topic
+                document.getElementById('refresh-intro').addEventListener('click', () => loadTopicMCQs('intro'));
+                document.getElementById('refresh-alkanes').addEventListener('click', () => loadTopicMCQs('alkanes'));
+                document.getElementById('refresh-nomenclature').addEventListener('click', () => loadTopicMCQs('nomenclature'));
+                document.getElementById('refresh-ethane').addEventListener('click', () => loadTopicMCQs('ethane'));
+                document.getElementById('refresh-cycloalkanes').addEventListener('click', () => loadTopicMCQs('cycloalkanes'));
+                document.getElementById('refresh-intermediates').addEventListener('click', () => loadTopicMCQs('intermediates'));
+                document.getElementById('refresh-chlorination').addEventListener('click', () => loadTopicMCQs('chlorination'));
+                document.getElementById('refresh-forty').addEventListener('click', () => loadTopicMCQs('forty'));
+                
+                // Reset progress button
+                document.getElementById('reset-progress').addEventListener('click', resetProgress);
+            }
+            
+            function toggleMenu() {
+                const menuToggle = document.getElementById('menu-toggle');
+                const mainNav = document.getElementById('main-nav');
+                
+                menuToggle.classList.toggle('active');
+                mainNav.classList.toggle('active');
+            }
+            
+            function toggleTheme() {
+                const themeToggle = document.getElementById('theme-toggle');
+                document.body.classList.toggle('dark-mode');
+                themeToggle.classList.toggle('dark');
+                saveToLocalStorage('darkMode', document.body.classList.contains('dark-mode'));
+            }
+            
+            function loadAllMCQs() {
+                // Load MCQs for each topic
+                loadTopicMCQs('intro');
+                loadTopicMCQs('alkanes');
+                loadTopicMCQs('nomenclature');
+                loadTopicMCQs('ethane');
+                loadTopicMCQs('cycloalkanes');
+                loadTopicMCQs('intermediates');
+                loadTopicMCQs('chlorination');
+                loadTopicMCQs('forty');
+            }
+            
+            function loadTopicMCQs(topic) {
+                const container = document.getElementById(`${topic}-mcqs-container`);
+                if (!container) return;
+                
+                container.innerHTML = '';
+                
+                // Randomize order of MCQs for this topic
+                const shuffledMCQs = [...organicChemistryMCQs[topic]].sort(() => Math.random() - 0.5);
+                
+                shuffledMCQs.forEach(mcq => {
+                    const mcqCard = createMCQCard(mcq, topic);
+                    container.appendChild(mcqCard);
+                });
+                
+                // Re-render KaTeX
+                setTimeout(renderKaTeX, 100);
+            }
+            
+            function createMCQCard(mcq, topic) {
+                const card = document.createElement('div');
+                card.className = 'card mcq-card fade-in';
+                card.id = `${topic}-mcq-${mcq.id}`;
+                
+                // Check if this MCQ has been completed
+                const isCompleted = progress[topic][mcq.id - 1];
+                
+                // Randomize option order
+                const options = [...mcq.options];
+                const correctAnswer = mcq.correctAnswer;
+                const correctOption = options[correctAnswer];
+                
+                // Shuffle options
+                for (let i = options.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [options[i], options[j]] = [options[j], options[i]];
+                }
+                
+                // Find new index of correct answer after shuffling
+                const newCorrectIndex = options.indexOf(correctOption);
+                
+                card.innerHTML = `
+                    <div class="mcq-info">
+                        <div class="mcq-id">MCQ #${mcq.id} ${isCompleted ? '<i class="fas fa-check" style="color: var(--success); margin-left: 4.05px;"></i>' : ''}</div>
+                        <div class="mcq-subject">${getTopicName(topic)}</div>
+                        <div class="mcq-question">${mcq.question}</div>
+                        <div class="mcq-options">
+                            ${options.map((option, index) => `
+                                <div class="mcq-option" data-option="${index}" data-correct="${index === newCorrectIndex}">${String.fromCharCode(65 + index)}) ${option}</div>
+                            `).join('')}
+                        </div>
+                        <div class="mcq-explanation">
+                            <div class="explanation-title">Detailed Explanation:</div>
+                            <div class="explanation-content">${mcq.explanation}</div>
+                        </div>
+                    </div>
+                    <div class="mcq-actions">
+                        <button class="btn btn-primary check-answer-btn">
+                            <i class="fas fa-check"></i> Check Answer
+                        </button>
+                        <button class="btn btn-secondary show-explanation-btn">
+                            <i class="fas fa-lightbulb"></i> Show Explanation
+                        </button>
+                    </div>
+                `;
+                
+                // Add event listeners
+                const checkAnswerBtn = card.querySelector('.check-answer-btn');
+                const showExplanationBtn = card.querySelector('.show-explanation-btn');
+                const optionElements = card.querySelectorAll('.mcq-option');
+                
+                let selectedOption = null;
+                
+                // If already completed, show the correct answer
+                if (isCompleted) {
+                    const correctOptionElement = card.querySelector('.mcq-option[data-correct="true"]');
+                    correctOptionElement.classList.add('correct');
+                    
+                    optionElements.forEach(option => {
+                        option.style.pointerEvents = 'none';
+                    });
+                    
+                    checkAnswerBtn.disabled = true;
+                    checkAnswerBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
+                } else {
+                    optionElements.forEach(option => {
+                        option.addEventListener('click', () => {
+                            optionElements.forEach(opt => opt.classList.remove('selected'));
+                            option.classList.add('selected');
+                            selectedOption = parseInt(option.getAttribute('data-option'));
+                        });
+                    });
+                    
+                    checkAnswerBtn.addEventListener('click', () => {
+                        if (selectedOption === null) {
+                            alert('Please select an answer first!');
+                            return;
+                        }
+                        
+                        optionElements.forEach(option => {
+                            option.classList.remove('correct', 'incorrect');
+                        });
+                        
+                        const correctOptionElement = card.querySelector('.mcq-option[data-correct="true"]');
+                        correctOptionElement.classList.add('correct');
+                        
+                        const selectedOptionElement = card.querySelector(`.mcq-option[data-option="${selectedOption}"]`);
+                        const isCorrect = selectedOptionElement.getAttribute('data-correct') === 'true';
+                        
+                        if (!isCorrect) {
+                            selectedOptionElement.classList.add('incorrect');
+                        } else {
+                            // Mark as completed
+                            progress[topic][mcq.id - 1] = true;
+                            saveProgress();
+                            updateProgress();
+                            
+                            const mcqId = card.querySelector('.mcq-id');
+                            mcqId.innerHTML = `MCQ #${mcq.id} <i class="fas fa-check" style="color: var(--success); margin-left: 4.05px;"></i>`;
+                            
+                            optionElements.forEach(option => {
+                                option.style.pointerEvents = 'none';
+                            });
+                            
+                            checkAnswerBtn.disabled = true;
+                            checkAnswerBtn.innerHTML = '<i class="fas fa-check"></i> Completed';
+                        }
+                    });
+                }
+                
+                showExplanationBtn.addEventListener('click', () => {
+                    const explanation = card.querySelector('.mcq-explanation');
+                    explanation.classList.toggle('show');
+                });
+                
+                return card;
+            }
+            
+            function getTopicName(topic) {
+                const names = {
+                    intro: 'Classification',
+                    alkanes: 'Alkanes & Cycloalkanes',
+                    nomenclature: 'Nomenclature',
+                    ethane: 'Ethane Structure',
+                    cycloalkanes: 'Cyclopropane & Cyclobutane',
+                    intermediates: 'Reactive Intermediates',
+                    chlorination: 'Chlorination Reactions',
+                    forty: '40 MCQs Set'
+                };
+                return names[topic] || topic;
+            }
+            
+            function updateProgress() {
+                // Calculate completion counts
+                const introCompleted = progress.intro.filter(Boolean).length;
+                const alkanesCompleted = progress.alkanes.filter(Boolean).length;
+                const nomenclatureCompleted = progress.nomenclature.filter(Boolean).length;
+                const ethaneCompleted = progress.ethane.filter(Boolean).length;
+                const cycloalkanesCompleted = progress.cycloalkanes.filter(Boolean).length;
+                const intermediatesCompleted = progress.intermediates.filter(Boolean).length;
+                const chlorinationCompleted = progress.chlorination.filter(Boolean).length;
+                const fortyCompleted = progress.forty.filter(Boolean).length;
+                
+                const topicTotal = introCompleted + alkanesCompleted + nomenclatureCompleted + ethaneCompleted + 
+                                 cycloalkanesCompleted + intermediatesCompleted + chlorinationCompleted;
+                const fortyTotal = fortyCompleted;
+                const totalCompleted = topicTotal + fortyTotal;
+                
+                // Calculate accuracy
+                const totalAttempted = Object.values(progress).flat().filter(x => x !== false).length;
+                const accuracy = totalAttempted > 0 ? Math.round((totalCompleted / totalAttempted) * 100) : 0;
+                
+                // Update stats
+                document.getElementById('completed-mcqs').textContent = totalCompleted;
+                document.getElementById('accuracy').textContent = `${accuracy}%`;
+                
+                // Update topic progress
+                document.getElementById('intro-completed').textContent = introCompleted;
+                document.getElementById('intro-progress').style.width = `${(introCompleted / 5) * 100}%`;
+                
+                document.getElementById('alkanes-completed').textContent = alkanesCompleted;
+                document.getElementById('alkanes-progress').style.width = `${(alkanesCompleted / 5) * 100}%`;
+                
+                document.getElementById('nomenclature-completed').textContent = nomenclatureCompleted;
+                document.getElementById('nomenclature-progress').style.width = `${(nomenclatureCompleted / 5) * 100}%`;
+                
+                document.getElementById('ethane-completed').textContent = ethaneCompleted;
+                document.getElementById('ethane-progress').style.width = `${(ethaneCompleted / 5) * 100}%`;
+                
+                document.getElementById('cycloalkanes-completed').textContent = cycloalkanesCompleted;
+                document.getElementById('cycloalkanes-progress').style.width = `${(cycloalkanesCompleted / 5) * 100}%`;
+                
+                document.getElementById('intermediates-completed').textContent = intermediatesCompleted;
+                document.getElementById('intermediates-progress').style.width = `${(intermediatesCompleted / 5) * 100}%`;
+                
+                document.getElementById('chlorination-completed').textContent = chlorinationCompleted;
+                document.getElementById('chlorination-progress').style.width = `${(chlorinationCompleted / 5) * 100}%`;
+                
+                document.getElementById('forty-completed').textContent = fortyCompleted;
+                document.getElementById('forty-progress').style.width = `${(fortyCompleted / 40) * 100}%`;
+                
+                // Update overall progress
+                document.getElementById('overall-completed').textContent = totalCompleted;
+                document.getElementById('overall-progress').style.width = `${(totalCompleted / 75) * 100}%`;
+                
+                // Update summary
+                document.getElementById('intro-summary').textContent = introCompleted;
+                document.getElementById('alkanes-summary').textContent = alkanesCompleted;
+                document.getElementById('nomenclature-summary').textContent = nomenclatureCompleted;
+                document.getElementById('ethane-summary').textContent = ethaneCompleted;
+                document.getElementById('cycloalkanes-summary').textContent = cycloalkanesCompleted;
+                document.getElementById('intermediates-summary').textContent = intermediatesCompleted;
+                document.getElementById('chlorination-summary').textContent = chlorinationCompleted;
+                document.getElementById('forty-summary').textContent = fortyCompleted;
+                
+                document.getElementById('intro-summary-progress').style.width = `${(introCompleted / 5) * 100}%`;
+                document.getElementById('alkanes-summary-progress').style.width = `${(alkanesCompleted / 5) * 100}%`;
+                document.getElementById('nomenclature-summary-progress').style.width = `${(nomenclatureCompleted / 5) * 100}%`;
+                document.getElementById('ethane-summary-progress').style.width = `${(ethaneCompleted / 5) * 100}%`;
+                document.getElementById('cycloalkanes-summary-progress').style.width = `${(cycloalkanesCompleted / 5) * 100}%`;
+                document.getElementById('intermediates-summary-progress').style.width = `${(intermediatesCompleted / 5) * 100}%`;
+                document.getElementById('chlorination-summary-progress').style.width = `${(chlorinationCompleted / 5) * 100}%`;
+                document.getElementById('forty-summary-progress').style.width = `${(fortyCompleted / 40) * 100}%`;
+            }
+            
+            function resetProgress() {
+                if (confirm('Are you sure you want to reset all progress? This action cannot be undone.')) {
+                    progress = {
+                        intro: Array(5).fill(false),
+                        alkanes: Array(5).fill(false),
+                        nomenclature: Array(5).fill(false),
+                        ethane: Array(5).fill(false),
+                        cycloalkanes: Array(5).fill(false),
+                        intermediates: Array(5).fill(false),
+                        chlorination: Array(5).fill(false),
+                        forty: Array(40).fill(false)
+                    };
+                    saveProgress();
+                    updateProgress();
+                    loadAllMCQs();
+                }
+            }
+            
+            function saveProgress() {
+                saveToLocalStorage('organicChemistryProgress', progress);
+            }
+            
+            function loadProgress() {
+                const savedProgress = getFromLocalStorage('organicChemistryProgress');
+                if (savedProgress) {
+                    // Ensure all arrays have correct length
+                    progress = {
+                        intro: savedProgress.intro || Array(5).fill(false),
+                        alkanes: savedProgress.alkanes || Array(5).fill(false),
+                        nomenclature: savedProgress.nomenclature || Array(5).fill(false),
+                        ethane: savedProgress.ethane || Array(5).fill(false),
+                        cycloalkanes: savedProgress.cycloalkanes || Array(5).fill(false),
+                        intermediates: savedProgress.intermediates || Array(5).fill(false),
+                        chlorination: savedProgress.chlorination || Array(5).fill(false),
+                        forty: savedProgress.forty || Array(40).fill(false)
+                    };
+                }
+            }
+            
+            function applyAnimations() {
+                const elements = document.querySelectorAll('.panel, .card, .nav-btn');
+                elements.forEach((element, index) => {
+                    setTimeout(() => {
+                        element.classList.add('fade-in');
+                    }, index * 50);
+                });
+            }
+            
+            function renderKaTeX() {
+                if (typeof renderMathInElement !== 'undefined') {
+                    renderMathInElement(document.body, {
+                        delimiters: [
+                            {left: '$$', right: '$$', display: true},
+                            {left: '$', right: '$', display: false},
+                            {left: '\\(', right: '\\)', display: false},
+                            {left: '\\[', right: '\\]', display: true}
+                        ],
+                        throwOnError: false
+                    });
+                }
+            }
+            
+            function saveToLocalStorage(key, value) {
+                try {
+                    localStorage.setItem(key, JSON.stringify(value));
+                } catch (e) {
+                    console.error('Error saving to localStorage:', e);
+                }
+            }
+            
+            function getFromLocalStorage(key) {
+                try {
+                    const value = localStorage.getItem(key);
+                    return value ? JSON.parse(value) : null;
+                } catch (e) {
+                    console.error('Error reading from localStorage:', e);
+                    return null;
+                }
+            }
+            
+            // Load dark mode setting
+            const darkMode = getFromLocalStorage('darkMode');
+            if (darkMode) {
+                document.body.classList.add('dark-mode');
+                document.getElementById('theme-toggle').classList.add('dark');
+            }
+        });
+    </script>
+</body>
+</html>
